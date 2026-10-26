@@ -1,0 +1,11 @@
+import Base
+import ../core/receipt.bend as R
+
+def run(+budget: Nat, work: Nat) -> R.Receipt<budget>:
+  match budget work:
+    case 0n _: R.empty(0n)
+    case 1n+n 0n: R.empty(1n+n)
+    case 1n+n 1n+w: R.tick(n,run(n,w))
+
+def batches(+budget: Nat, first: Nat, second: Nat) -> R.Receipt<budget>:
+  run(budget,first)

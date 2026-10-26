@@ -5,7 +5,7 @@
 3. State universal public-API laws in LAWS.bend. Include positive success obligations: refusal of every input must not pass. For parsers, define malformed input behavior; for collections, preserve elements as well as ordering; for stateful programs, prove allowed transitions and their composition.
 4. Reuse core/receipt.bend only when additive, nonnegative accounting fits. Its type ensures a sum identity, not provenance, uniqueness, physical expenditure or progress. Add task-specific refinements to establish those properties.
 5. Implement src/ and supporting proofs. PROOF.bend must import LAWS.bend and fill each law. Keep ordinary IO in the entry adapter.
-6. Supply independent test outputs and wrong implementations that should fail. Update mutation anchors when the implementation shape changes, as an explicit harness change. An invalid anchor is an infrastructure error, never a pass.
+6. Supply independent test outputs and wrong implementations that should fail. Negative controls replace the public module with independent wrong implementations, so agents can change algorithms without adjusting string anchors. New interfaces require reviewed new controls.
 7. Review the exact specification, trusted boundary and completion criteria. After authorization, update acceptance/protected.json from the protected file set. Never update it as an automatic response to a failed check.
 8. Run scripts/verify.py from a clean checkout; preserve its receipt. Only then consider publication or a new autonomous run.
 

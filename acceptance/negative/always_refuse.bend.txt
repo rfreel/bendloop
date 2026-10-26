@@ -1,0 +1,8 @@
+import Base
+import ../core/receipt.bend as R
+
+def run(+budget: Nat, work: Nat) -> R.Receipt<budget>:
+  R.empty(budget)
+
+def batches(+budget: Nat, first: Nat, second: Nat) -> R.Receipt<budget>:
+  R.empty(budget)

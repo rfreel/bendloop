@@ -160,13 +160,10 @@ def verify(root, authority, tools, output):
                 receipt["stages"].append(binary)
             candidate = snapshot / "src/counter.bend"
             original = candidate.read_text()
-            mutations = {
-                "always_refuse": ("R.tick(n,run(n,w))", "R.empty(1n+n)"),
-                "reset_composition": ("remaining => run(remaining,second)", "remaining => R.empty(remaining)")}
-            for name, (old, new) in mutations.items():
-                if original.count(old) != 1:
-                    raise GateError("ERROR", f"Update the reviewed mutation anchor: {name}")
-                candidate.write_text(original.replace(old, new))
+            # Whole invalid candidates target the API, not implementation-specific text anchors.
+            # Agents may freely restructure the implementation without breaking these controls.
+            for name in ["always_refuse", "skip_second"]:
+                candidate.write_text((authority / "acceptance/negative" / (name + ".bend.txt")).read_text())
                 run([str(bend), "PROOF.bend", "--verdict"], snapshot, env,
                     lock["proof_timeout_seconds"], output / (name + ".log"), expect_rejection=True)
                 candidate.write_text(original)

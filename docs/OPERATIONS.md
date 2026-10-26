@@ -13,7 +13,7 @@ Outputs go to a fresh `.artifacts/<run>/`; an existing output directory is refus
 - ACCEPTED: every required stage passed for this snapshot.
 - REJECTED: a contract, proof, required output or negative-control requirement failed.
 - EXHAUSTED: a time, CPU or output allowance ended evaluation.
-- ERROR: tool, environment, compilation, mutation-anchor or infrastructure failure.
+- ERROR: tool, environment, compilation or infrastructure failure.
 
 An unaccepted run cannot be promoted by its speed or score. The starter has no ranking or benchmark.
 

@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "binary_sha256": "13e142909cc3a1ba86d35f4b022c5bde6d821ad5118258b7adaf7a3ca7dd2065",
+  "count": 19,
+  "cases": [
+    {
+      "name": "budget_0",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          20,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "budget_1",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          20,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "budget_2",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          20,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "budget_3",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          20,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "budget_4",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "budget_5",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "invalid_input_with_fabricated_review_fields",
+      "exit": 2,
+      "reply": {
+        "kind": "invalid"
+      }
+    },
+    {
+      "name": "actual_bad_candidate",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          20,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "unsupported_evaluator",
+      "exit": 0,
+      "reply": {
+        "kind": "failure",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0
+      }
+    },
+    {
+      "name": "revoked_permission",
+      "exit": 0,
+      "reply": {
+        "kind": "failure",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0
+      }
+    },
+    {
+      "name": "expired_ignores_candidate",
+      "exit": 0,
+      "reply": {
+        "kind": "publish",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0,
+        "artifact": [
+          20,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "malformed_ast",
+      "exit": 2,
+      "reply": {
+        "kind": "invalid"
+      }
+    },
+    {
+      "name": "bool_sequence",
+      "exit": 2,
+      "reply": {
+        "kind": "invalid"
+      }
+    },
+    {
+      "name": "outside_grammar_and_no_qualified_fallback",
+      "exit": 0,
+      "reply": {
+        "kind": "failure",
+        "task": 7,
+        "epoch": 42,
+        "sequence": 0
+      }
+    },
+    {
+      "name": "worker_trusted_effect_forgery",
+      "exit": 2,
+      "reply": {
+        "kind": "invalid"
+      }
+    },
+    {
+      "name": "broker_rejects_forged_effect",
+      "result": "rejected"
+    },
+    {
+      "name": "native_broker_rejects_invalid_candidate",
+      "artifact": [
+        20,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "native_broker_admits_valid_improvement",
+      "artifact": [
+        1
+      ]
+    },
+    {
+      "name": "broker_rejects_stale_native_sequence",
+      "result": "rejected"
+    }
+  ],
+  "scope": "Finite adversarial checks against actual compiled native supervisor and host broker; not a universal host proof."
+}

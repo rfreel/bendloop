@@ -1,0 +1,27 @@
+{
+  "source": "User supplied agent-supervisor-system-design.zip",
+  "archive_sha256": "4c7987451220e2822a1def08735c2e73aaf87417f30bcb510938c06a53312074",
+  "design_revision": 1,
+  "documents": {
+    "ASSURANCE.md": "030e30a99c821e3c5221c9e5231d2817526739a60d4ca1940eb64f8f08703d8d",
+    "INTERFACE.md": "b4a97872e787450308dda5744dbc00e893485e7730e5696d4aa98b26d7b8cc5f",
+    "LEARNING.md": "5f0201e33d528a478b60b86b2cd0aad4b3d38641bb88717b3c48660350a66b81",
+    "PLAN.md": "615b6cad98d784c3aa7ec19a81c0013104b8f8df84dcb21c2c2b6214b6808cb1",
+    "README.md": "95500defd7f8853c6c693834ac5b6c905b92fc36a98544a0b3cf3375a1b42757",
+    "REVISIONS.md": "9bccb584694460af58c7ad707ec359373ab62a98c1d7374fe0bf3271d2418e31",
+    "SYSTEM.md": "fdf2b4dce559189eacae212e43dd62e328e69c1e2250df82716470d1e00c31ae",
+    "design-check.json": "23ff01256cb1dded449c8dc15acf2c81408a3369242aac34c5b12ad4eb310b5e",
+    "examples/checkpoint.json": "e102532b54c21e55161a769c39440497de06bc488a42cc1c02db6f31a642c96b",
+    "examples/driver-walkthrough.md": "3b4be7c9b47bb5cefec7c753e8b09bd0368be5b21e5aee808077d70fe07ba4c4",
+    "examples/reusable-capability.json": "beffd3b904a00528a114715bc9ac9ffcc2f750c41a2a7b20ad1ed322c2fd06bf",
+    "examples/stale-action-receipt.json": "f7e2b10f3fa447f6136e836788972dbaf9e6e812cdaf3f26efb929733f6abb04",
+    "examples/unrelated-event-delta.json": "2f0ea3ea459f534feeedab2bb30bf4833ab703369512beba8957b5798be39b6e",
+    "examples/work-view.json": "839678a716b68bf998a317929bdde2c0a6fe766f77429daac7f4e07bd4ccd623",
+    "plan.json": "c93c6695ad1e37c831e43116a9efa558e94ff996bf5a8fc57556f4901f404b04",
+    "requirements.json": "fb0299ff98320c4f83acc31d013aabb5a82721d1f900f9ebbf58de7682957d0b",
+    "revision-manifest.json": "4e7dbc5f3d02ef878b1f6ca4845a3f85595ccb5e388597ec4f9857e3542165e1",
+    "validate_design.py": "2e22867277232e1bb9166c561f3e0f1ef23794b794f03da4d2f150b6ebda9937"
+  },
+  "implementation_rule": "Preserve design inventory and scenario meaning. Implementations below are separately scoped; consistency is not runtime verification. P1 requires a controlled sorting journey.",
+  "source_status": "proposed_not_implemented (preserved source statement, not current implementation status)"
+}

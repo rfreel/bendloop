@@ -1,0 +1,16 @@
+{
+  "scope": "Finite WorkView-only comprehension trials with fresh development agents; not OS sandbox tests or general usability proof",
+  "v1": {
+    "agents": 2,
+    "view_bytes": 7309,
+    "result": "Both reconstructed mandatory sort and multiplicity requirements, the2-to1witness, retained work and correct next candidate. Both independently found missing concrete operation/dispatch and expansion instructions.",
+    "repair": "Added receiver-bound method definitions, outer action envelope, expansion operation, deadline units and retry guidance."
+  },
+  "v2": {
+    "agents": 1,
+    "view_bytes": 10373,
+    "result": "Fresh agent reconstructed qualified baseline, optionalIDpreference, retained duplicate-loss witness, concrete Task.act request, evidence expansion and unknown-effect recovery.",
+    "receiver_check": "Root inspected the candidate data, checked whole-record Counter preservation independently, then actual pinned Bend/Broker accepted and published it.",
+    "remaining_boundary": "Actual Task handle must be granted by receiver; copying a view is not authority. Calibrated cost estimates and cross-process await transport are absent."
+  }
+}

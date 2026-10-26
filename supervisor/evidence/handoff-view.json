@@ -1,0 +1,486 @@
+{
+  "interface_contract": {
+    "binding": "receiver-supplied Python Task handle already bound to this task_id; no public RPC or credential is supplied by this view",
+    "module": "supervisor.interface.Task",
+    "observe": "task.observe(cursor=None, focus=STABLE_ID, context_budget=16384) -> WorkView or scoped detail; budget unit is encoded JSON bytes",
+    "act": "task.act(action=ACTION_OBJECT, basis=VIEW[\"basis\"], idempotency_key=FRESH_KEY) -> ActionReceipt; task_id is implicit in the supplied handle",
+    "await": "task.await_events(cursor=VIEW[\"cursor\"], event_filter=[\"receipt\"], deadline=RECEIVER_MONOTONIC_SECONDS) -> EventBatch or TimedOut; timeout does not cancel",
+    "action_envelope": {
+      "action": "one typed object from actions[].schema",
+      "basis": "copy the current view basis unchanged",
+      "idempotency_key": "new nonempty string <=128characters, e.g. uuid.uuid4().hex; retain exact key+semantic request for retry"
+    },
+    "expansion": {
+      "method": "task.observe(focus=ID)",
+      "ids": "details.expandable_ids; receipt/evidence/claim/artifact IDs are stable"
+    },
+    "authority": "copying a descriptor or choosing a key creates no capability; receiver dispatch and native admission remain controlling"
+  },
+  "schema_version": "bendloop-work-view-v1",
+  "task_id": "8cfd31a0de154bac8445727e5ceeda48",
+  "cursor": 14,
+  "basis": {
+    "contract": "d41ec12a8992a3e0754858d24ad408482a817fb247beef7795f65db17b2eefb6",
+    "checker": "1b0c935cde276e9e3e088a5cd940200597ba049b3b51bed3b872fbb471fbe24b",
+    "incumbent": "receiver-incumbent:de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+    "frozen": {
+      "a0-1": "4ca36b65b7fec9b8f9c97f20ae22409dd7878bf8a0d23f4e377b855a0671e7b5"
+    }
+  },
+  "outcome_required": "Sort these eight input records by date without losing or changing any record.",
+  "contract": {
+    "id": "d41ec12a8992a3e0754858d24ad408482a817fb247beef7795f65db17b2eefb6",
+    "task": 1,
+    "epoch": 0,
+    "adapter": "sort8",
+    "checker_sha256": "1b0c935cde276e9e3e088a5cd940200597ba049b3b51bed3b872fbb471fbe24b",
+    "declaration": {
+      "codec": "flat triples date/id/value; each integer0..20",
+      "failure": "permitted failure when no candidate qualifies",
+      "mandatory_properties": [
+        "date order",
+        "whole-record multiplicity"
+      ],
+      "permitted_effects": [
+        "receiver-owned fixed result.bin"
+      ],
+      "preferences": [
+        {
+          "origin": "added receiver comparison preference, not a mandatory user obligation",
+          "rule": "reduce same-date ID inversions"
+        }
+      ],
+      "required_result": "eight records sorted by date; every whole input record preserved including duplicate multiplicity"
+    },
+    "authority": "receiver-owned contract; notes and worker artifacts are data",
+    "input_reference": {
+      "codec": "flat-triples-date-id-value-v1",
+      "canonical_sha256": "ada03a615d9b44c663b60cd102bbb26eea53185eb43221a8b59c532a0a7c5c4a",
+      "records": [
+        {
+          "date": 3,
+          "id": 4,
+          "value": 9
+        },
+        {
+          "date": 1,
+          "id": 2,
+          "value": 7
+        },
+        {
+          "date": 3,
+          "id": 1,
+          "value": 5
+        },
+        {
+          "date": 0,
+          "id": 8,
+          "value": 1
+        },
+        {
+          "date": 2,
+          "id": 5,
+          "value": 6
+        },
+        {
+          "date": 1,
+          "id": 2,
+          "value": 7
+        },
+        {
+          "date": 2,
+          "id": 3,
+          "value": 8
+        },
+        {
+          "date": 0,
+          "id": 6,
+          "value": 2
+        }
+      ]
+    }
+  },
+  "recent_receipts": [
+    {
+      "id": "r11",
+      "action": "evaluate_publish",
+      "outcome": "Rejected",
+      "code": "CANDIDATE_NOT_SELECTED",
+      "recovery": "Inspect the retained native sorting diagnostic and exact frozen records, repair locally, and submit a new candidate; diagnostic output never authorizes publication.",
+      "candidate_id": "a0-1",
+      "evidence_ids": [
+        "e7",
+        "e10"
+      ],
+      "retained_artifact_ids": [
+        "a0-1"
+      ],
+      "causal_witness": {
+        "observation": {
+          "kind": "inspection",
+          "missing_record": {
+            "expected_count": 2,
+            "observed_count": 1,
+            "record": [
+              1,
+              2,
+              7
+            ]
+          },
+          "ordered": true,
+          "records_preserved": false,
+          "unordered_pair": null
+        },
+        "scope": "sorting checker diagnostics for this exact frozen candidate only; never publication authority",
+        "source_evidence_id": "e10"
+      }
+    },
+    {
+      "id": "r14",
+      "action": "checkpoint",
+      "outcome": "Completed",
+      "code": "COMPLETED",
+      "recovery": "Observe the updated view and choose an admissible next action.",
+      "candidate_id": null,
+      "evidence_ids": [],
+      "retained_artifact_ids": [
+        "a0-1"
+      ],
+      "causal_witness": null
+    }
+  ],
+  "established_claims": [
+    {
+      "basis": {
+        "checker": "1b0c935cde276e9e3e088a5cd940200597ba049b3b51bed3b872fbb471fbe24b",
+        "contract": "d41ec12a8992a3e0754858d24ad408482a817fb247beef7795f65db17b2eefb6",
+        "frozen": {
+          "a0-1": "4ca36b65b7fec9b8f9c97f20ae22409dd7878bf8a0d23f4e377b855a0671e7b5"
+        },
+        "incumbent": "receiver-incumbent:de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4"
+      },
+      "evidence_ids": [
+        "e7"
+      ],
+      "id": "c9",
+      "kind": "empirical",
+      "result": "satisfied",
+      "scope": "receiver selected and acknowledged this exact artifact under the current contract"
+    }
+  ],
+  "incumbent": {
+    "artifact_id": "receiver-incumbent:de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+    "evidence_ids": [
+      "e7"
+    ],
+    "scope": "current receiver-acknowledged local result",
+    "sha256": "de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+    "value": [
+      0,
+      8,
+      1,
+      0,
+      6,
+      2,
+      1,
+      2,
+      7,
+      1,
+      2,
+      7,
+      2,
+      5,
+      6,
+      2,
+      3,
+      8,
+      3,
+      4,
+      9,
+      3,
+      1,
+      5
+    ],
+    "display": {
+      "codec": "flat-triples-date-id-value-v1",
+      "canonical_sha256": "de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+      "records": [
+        {
+          "date": 0,
+          "id": 8,
+          "value": 1
+        },
+        {
+          "date": 0,
+          "id": 6,
+          "value": 2
+        },
+        {
+          "date": 1,
+          "id": 2,
+          "value": 7
+        },
+        {
+          "date": 1,
+          "id": 2,
+          "value": 7
+        },
+        {
+          "date": 2,
+          "id": 5,
+          "value": 6
+        },
+        {
+          "date": 2,
+          "id": 3,
+          "value": 8
+        },
+        {
+          "date": 3,
+          "id": 4,
+          "value": 9
+        },
+        {
+          "date": 3,
+          "id": 1,
+          "value": 5
+        }
+      ]
+    }
+  },
+  "candidates": [
+    {
+      "id": "a0-1",
+      "sha256": "4ca36b65b7fec9b8f9c97f20ae22409dd7878bf8a0d23f4e377b855a0671e7b5",
+      "scope": "immutable bounded integer artifact; admission not yet established"
+    }
+  ],
+  "details": {
+    "artifacts_total": 1,
+    "claims_total": 1,
+    "evidence_total": 3,
+    "expandable_ids": {
+      "artifacts": [
+        "a0-1"
+      ],
+      "claims": [
+        "c9"
+      ],
+      "evidence": [
+        "e4",
+        "e7",
+        "e10"
+      ],
+      "receipts": [
+        "r5",
+        "r11",
+        "r14"
+      ]
+    }
+  },
+  "deadline": {
+    "monotonic_ns": 99987756407136,
+    "observed_monotonic_ns": 96387801421877,
+    "unit": "nanoseconds; receiver time.monotonic_ns clock on this boot, not UTC",
+    "await_unit": "deadline argument is seconds on the same receiver monotonic clock"
+  },
+  "budget": {
+    "ingress_spent": 1,
+    "ingress_remaining": 7,
+    "evaluations_spent_or_reserved": 1,
+    "evaluations_remaining": 8,
+    "native_logical_transaction_budget": 5,
+    "physical_total_envelope": "not implemented by this facade"
+  },
+  "open_decisions": [],
+  "actions": [
+    {
+      "type": "submit_candidate",
+      "schema": {
+        "type": "submit_candidate",
+        "artifact": "array<int 0..20>, length 1..63"
+      },
+      "preconditions": [
+        "current contract/checker",
+        "live remaining ingress allowance"
+      ],
+      "required_capability": "receiver-dispatched task action; no worker authorization Boolean",
+      "read_set": [
+        "contract",
+        "checker"
+      ],
+      "reservation_ceiling": {
+        "ingress": 1,
+        "native_transactions": 0
+      },
+      "estimated_cost": {
+        "value": null,
+        "uncertainty": "not calibrated; actual dispatch time recorded"
+      },
+      "effect_scope": "receiver-private frozen artifact only",
+      "completion_predicate": "receiver-private frozen artifact only recorded with evidence",
+      "recoverable_failures": [
+        "Rejected: inspect exact precondition",
+        "Inconclusive: inspect checker observation",
+        "EffectUnknown: resume before retry"
+      ],
+      "retry": "same key plus same semantic request returns original receipt; changed request conflicts"
+    },
+    {
+      "type": "evaluate_publish",
+      "schema": {
+        "type": "evaluate_publish",
+        "candidate_id": "frozen artifact ID or null at task deadline"
+      },
+      "preconditions": [
+        "current contract/checker/incumbent/exact frozen artifact",
+        "no unresolved effect",
+        "evaluation allowance",
+        "live candidate or task deadline for fallback"
+      ],
+      "required_capability": "receiver-dispatched task action; no worker authorization Boolean",
+      "read_set": [
+        "contract",
+        "checker",
+        "incumbent",
+        "frozen"
+      ],
+      "reservation_ceiling": {
+        "ingress": 0,
+        "native_transactions": 2
+      },
+      "estimated_cost": {
+        "value": null,
+        "uncertainty": "not calibrated; actual dispatch time recorded"
+      },
+      "effect_scope": "native-qualified fixed result.bin or permitted failure",
+      "completion_predicate": "native-qualified fixed result.bin or permitted failure recorded with evidence",
+      "recoverable_failures": [
+        "Rejected: inspect exact precondition",
+        "Inconclusive: inspect checker observation",
+        "EffectUnknown: resume before retry"
+      ],
+      "retry": "same key plus same semantic request returns original receipt; changed request conflicts"
+    },
+    {
+      "type": "checkpoint",
+      "schema": {
+        "type": "checkpoint"
+      },
+      "preconditions": [
+        "current contract/checker"
+      ],
+      "required_capability": "receiver-dispatched task action; no worker authorization Boolean",
+      "read_set": [
+        "contract",
+        "checker"
+      ],
+      "reservation_ceiling": {
+        "ingress": 0,
+        "native_transactions": 0
+      },
+      "estimated_cost": {
+        "value": null,
+        "uncertainty": "not calibrated; actual dispatch time recorded"
+      },
+      "effect_scope": "receiver-private checkpoint record",
+      "completion_predicate": "receiver-private checkpoint record recorded with evidence",
+      "recoverable_failures": [
+        "Rejected: inspect exact precondition",
+        "Inconclusive: inspect checker observation",
+        "EffectUnknown: resume before retry"
+      ],
+      "retry": "same key plus same semantic request returns original receipt; changed request conflicts"
+    },
+    {
+      "type": "resume",
+      "schema": {
+        "type": "resume"
+      },
+      "preconditions": [
+        "authenticated journal",
+        "current contract/checker"
+      ],
+      "required_capability": "receiver-dispatched task action; no worker authorization Boolean",
+      "read_set": [
+        "contract",
+        "checker"
+      ],
+      "reservation_ceiling": {
+        "ingress": 0,
+        "native_transactions": 0
+      },
+      "estimated_cost": {
+        "value": null,
+        "uncertainty": "not calibrated; actual dispatch time recorded"
+      },
+      "effect_scope": "local broker reconciliation; no native publication replay",
+      "completion_predicate": "local broker reconciliation; no native publication replay recorded with evidence",
+      "recoverable_failures": [
+        "Rejected: inspect exact precondition",
+        "Inconclusive: inspect checker observation",
+        "EffectUnknown: resume before retry"
+      ],
+      "retry": "same key plus same semantic request returns original receipt; changed request conflicts"
+    }
+  ],
+  "blocked_actions": [],
+  "checkpoint": {
+    "artifact_ids": [
+      "a0-1"
+    ],
+    "basis": {
+      "checker": "1b0c935cde276e9e3e088a5cd940200597ba049b3b51bed3b872fbb471fbe24b",
+      "contract": "d41ec12a8992a3e0754858d24ad408482a817fb247beef7795f65db17b2eefb6",
+      "frozen": {
+        "a0-1": "4ca36b65b7fec9b8f9c97f20ae22409dd7878bf8a0d23f4e377b855a0671e7b5"
+      },
+      "incumbent": "receiver-incumbent:de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4"
+    },
+    "evaluations_spent": 1,
+    "evidence_ids": [
+      "e4",
+      "e7",
+      "e10"
+    ],
+    "id": "checkpoint:13",
+    "incumbent": {
+      "artifact_id": "receiver-incumbent:de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+      "evidence_ids": [
+        "e7"
+      ],
+      "scope": "current receiver-acknowledged local result",
+      "sha256": "de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+      "value": [
+        0,
+        8,
+        1,
+        0,
+        6,
+        2,
+        1,
+        2,
+        7,
+        1,
+        2,
+        7,
+        2,
+        5,
+        6,
+        2,
+        3,
+        8,
+        3,
+        4,
+        9,
+        3,
+        1,
+        5
+      ]
+    },
+    "scope": "authenticated task handoff; no private evaluation answers",
+    "unresolved_effect_keys": []
+  },
+  "cancelled": null,
+  "assurance_scope": "actual pinned Bend admission plus tested Python facade/Broker; no facade kernel proof or general refinement"
+}

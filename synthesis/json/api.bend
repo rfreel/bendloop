@@ -1,8 +1,9 @@
 import Base
 import ./parser.bend as J
+import ../replay/runtime.bend as Replay
+import ../certificates/runtime.bend as C
 import ./schema.bend as V
 import ../interpreter/runtime.bend as R
-import ../certificates/runtime.bend as C
 import ../search/runtime.bend as S
 import ../search/grammar.bend as G
 import ../search/render.bend as O
@@ -67,33 +68,26 @@ def synthesize(+v: J.Value) -> Reply:
     errors(V.request_type_error(v),u =>
       errors(V.request_range_error(v),u => search_expr(v,V.ast(V.get("reference",v))))))
 
-def allowed(expr: R.Expr, +ops: G.Ops) -> Bool:
-  match expr ops:
-    case R.Input{} _: True{}
-    case R.Constant{b} _: True{}
-    case R.Not{x} G.Ops{a,b,c,d}: Bool.and(a,allowed(x,ops))
-    case R.And{x,y} G.Ops{a,b,c,d}: Bool.and(b,Bool.and(allowed(x,ops),allowed(y,ops)))
-    case R.Or{x,y} G.Ops{a,b,c,d}: Bool.and(c,Bool.and(allowed(x,ops),allowed(y,ops)))
-    case R.Xor{x,y} G.Ops{a,b,c,d}: Bool.and(d,Bool.and(allowed(x,ops),allowed(y,ops)))
-
-def show_numbers(xs: List<&2,U32>) -> String:
-  match xs:
-    case Nil{}: ""
-    case Con{h,Nil{}}: U32.show(h)
-    case Con{h,t}: U32.show(h) ++ "," ++ show_numbers(t)
-
-def checked(-reference: R.Expr, -candidate: R.Expr, result: C.Check<reference,candidate>) -> Reply:
+def table(values: List<&2,U32>) -> Maybe<&2,Replay.Table>:
+  match values:
+    case Con{v0,Con{v1,Con{v2,Con{v3,Con{v4,Con{v5,Con{v6,Con{v7,Con{v8,Con{v9,Con{v10,Con{v11,Con{v12,Con{v13,Con{v14,Con{v15,Nil{}}}}}}}}}}}}}}}}}: Some{Replay.Table{bits(G.constant((v0 + 1 : U32))),bits(G.constant((v1 + 1 : U32))),bits(G.constant((v2 + 1 : U32))),bits(G.constant((v3 + 1 : U32))),bits(G.constant((v4 + 1 : U32))),bits(G.constant((v5 + 1 : U32))),bits(G.constant((v6 + 1 : U32))),bits(G.constant((v7 + 1 : U32))),bits(G.constant((v8 + 1 : U32))),bits(G.constant((v9 + 1 : U32))),bits(G.constant((v10 + 1 : U32))),bits(G.constant((v11 + 1 : U32))),bits(G.constant((v12 + 1 : U32))),bits(G.constant((v13 + 1 : U32))),bits(G.constant((v14 + 1 : U32))),bits(G.constant((v15 + 1 : U32)))}}
+    case _: None{}
+def verdict(-r: Replay.Request,-p: Replay.Packet,result: Replay.Verdict<r,p>) -> Reply:
   match result:
-    case C.Equivalent{certificate}: Reply{0,"{\"status\":\"VerifiedImprovement\"}",""}
-    case C.Different{input,refute}: invalid_certificate("certificate is not equivalent")
-
-def replay_exprs(+req: J.Value, +cert: J.Value, ref: Maybe<&2,R.Expr>, embedded: Maybe<&2,R.Expr>, cand: Maybe<&2,R.Expr>) -> Reply:
+    case Replay.Accepted{source,membership,strict,cost,equivalence,table}: Reply{0,"{\"status\":\"VerifiedImprovement\"}",""}
+    case Replay.Invalid{why}: invalid_certificate(why)
+def checked_packet(+r: Replay.Request,+p: Replay.Packet) -> Reply:
+  verdict(r,p,Replay.replay(r,p))
+def replay_table(+req: J.Value,ref: R.Expr,embedded: R.Expr,cand: R.Expr,cost: Nat,table: Maybe<&2,Replay.Table>) -> Reply:
+  match table:
+    case None{}: invalid_certificate("outputs shape")
+    case Some{values}:
+      checked_packet(Replay.Request{ref,V.ops(V.get("allowed_ops",req)),V.bound(V.num(V.get("max_nodes",req)))},
+        Replay.Packet{embedded,cand,cost,values})
+def replay_exprs(+req: J.Value,+cert: J.Value,ref: Maybe<&2,R.Expr>,embedded: Maybe<&2,R.Expr>,cand: Maybe<&2,R.Expr>) -> Reply:
   match ref embedded cand:
-    case Some{+r} Some{e} Some{+c}:
-      cert_gate(String.eq(O.tokens(r),O.tokens(e)),"certificate reference differs",u =>
-        cert_gate(Bool.and(Nat.is_le(R.size(c),U32.to_nat(V.num(V.get("max_nodes",req)))),allowed(c,V.ops(V.get("allowed_ops",req)))),"candidate outside grammar",u =>
-          cert_gate(Bool.and(Nat.is_eq(R.cost(c),U32.to_nat(V.num(V.get("candidate_cost",cert)))),Nat.is_lt(R.cost(c),R.cost(r))),"candidate cost or improvement",u =>
-            cert_gate(String.eq(O.outputs(c),"[" ++ show_numbers(V.tokens(V.get("outputs",cert))) ++ "]"),"certificate outputs differ",u => checked(r,c,C.certify(r,c))))))
+    case Some{r} Some{e} Some{c}:
+      replay_table(req,r,e,c,U32.to_nat(V.num(V.get("candidate_cost",cert))),table(V.tokens(V.get("outputs",cert))))
     case _ _ _: invalid_certificate("AST shape")
 
 def replay_fields(+req: J.Value, +cert: J.Value) -> Reply:

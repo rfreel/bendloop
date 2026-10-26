@@ -1,0 +1,58 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 51 and seed 7612818036283556180 with 1 worker on 8 cores with 1067MB heap and 64MB offheap memory [pid: 431] (Linux 6.18.55 amd64, Ubuntu 17.0.20 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /tmp/supervisor-tla-6ea4qtwp/Supervisor.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Supervisor
+Starting... (2026-10-26 13:38:19)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-10-26 13:38:20.
+Error: Invariant TypeOK is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ epoch = 0
+/\ evaluationsSpent = 0
+/\ workerSpent = (w0 :> 0 @@ w1 :> 0)
+/\ outcome = "searching"
+/\ clock = 0
+/\ frozen = none
+/\ pool = {}
+/\ evaluation = none
+/\ bindings = {}
+/\ crashes = 0
+/\ published = none
+/\ up = TRUE
+/\ stamp = 0
+/\ credits = 1
+/\ prepared = none
+/\ incumbent = [epoch |-> 0, artifact |-> "base"]
+/\ inbox = none
+/\ effects = {}
+
+State 2: <WorkerCompute line 34, col 18 to line 38, col 186 of module Supervisor>
+/\ epoch = 0
+/\ evaluationsSpent = 0
+/\ workerSpent = (w0 :> 2 @@ w1 :> 0)
+/\ outcome = "searching"
+/\ clock = 0
+/\ frozen = none
+/\ pool = {}
+/\ evaluation = none
+/\ bindings = {}
+/\ crashes = 0
+/\ published = none
+/\ up = TRUE
+/\ stamp = 0
+/\ credits = 1
+/\ prepared = none
+/\ incumbent = [epoch |-> 0, artifact |-> "base"]
+/\ inbox = none
+/\ effects = {}
+
+34 states generated, 34 distinct states found, 32 states left on queue.
+The depth of the complete state graph search is 2.
+Finished in 00s at (2026-10-26 13:38:20)

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "actual pinned native Bend supervisor to fixed-file broker; not hostile process isolation",
+  "tests": 15,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 0.1818616450036643,
+  "binary_sha256": "13e142909cc3a1ba86d35f4b022c5bde6d821ad5118258b7adaf7a3ca7dd2065",
+  "expected_sha256": "13e142909cc3a1ba86d35f4b022c5bde6d821ad5118258b7adaf7a3ca7dd2065",
+  "sources": {
+    "test_native.py": "ecbea75d1c21b3c49245b378d2ae3ccd3ffd410c8f15a2c5d140359a04006363",
+    "test_host.py": "fa3f30e294ea2ab5975fd2cfba14f45fecae4b74c74e46031c870e0aaa68c2bd",
+    "isolation.py": "e169506d28cd4c9a92f73976cfd53d9e1ecf0cbfa9e4aadb9498e579d4f02f3a",
+    "broker.py": "c352697a3c77bfeb5968d4cd9b7385d9d8416e102d2df9efe28b767da8ccaa38",
+    "native.py": "604954086797b3fafb17dee6fc175be08e27ba73c628d7fde017ebbfa2219da7"
+  }
+}

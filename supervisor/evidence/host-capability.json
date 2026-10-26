@@ -1,0 +1,11 @@
+{
+  "available": false,
+  "reasons": [
+    "cgroup delegation/resource controls unavailable: [Errno 30] Read-only file system: '/sys/fs/cgroup/bendloop-1aaf210215b848e48dd5961d7250ab63'"
+  ],
+  "bwrap": "/usr/bin/bwrap",
+  "bwrap_sha256": "52231e1caf55bcbc667b269f49c63599a6f7db4767ae6a039580d0ff853db712",
+  "cgroup": "/sys/fs/cgroup",
+  "namespace_probe": "not attempted without required cgroup",
+  "scope": "host capability observation, not a proof of the Linux boundary"
+}

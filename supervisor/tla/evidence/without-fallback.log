@@ -1,0 +1,29 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 50 and seed 6909078137296267992 with 1 worker on 8 cores with 1067MB heap and 64MB offheap memory [pid: 68] (Linux 6.18.55 amd64, Ubuntu 17.0.20 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /tmp/supervisor-tla-6ea4qtwp/Supervisor.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Supervisor
+Starting... (2026-10-26 13:37:44)
+Implied-temporal checking--satisfiability problem has 1 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-10-26 13:37:44.
+Checking temporal properties for the current state space with 20651 total distinct states at (2026-10-26 13:37:47)
+Finished checking temporal properties in 00s at 2026-10-26 13:37:47
+Progress(8) at 2026-10-26 13:37:47: 378,966 states generated (378,966 s/min), 22,133 distinct states found (22,133 ds/min), 10,363 states left on queue.
+Progress(16) at 2026-10-26 13:38:05: 3,177,633 states generated, 122,496 distinct states found, 0 states left on queue.
+Checking temporal properties for the complete state space with 122496 total distinct states at (2026-10-26 13:38:05)
+Finished checking temporal properties in 00s at 2026-10-26 13:38:06
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 2.0E-8
+  based on the actual fingerprints:  val = 1.1E-10
+3177633 states generated, 122496 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 16.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 31 and the 95th percentile is 3).
+Finished in 22s at (2026-10-26 13:38:06)

@@ -10,7 +10,7 @@ The configured worker is Codex, with the machine-default account and no account 
 
 Run `ff --config /path/to/factory.yaml validate`, then `ff --config /path/to/factory.yaml run --loops specify`.
 Use `status`, `runs`, and `events` with the same config to observe actual progress. The stock factory
-supports detached agents; stopping the daemon alone does not stop an agent. Use `ff stop RUN_ID --cascade`.
+supports detached agents; stopping the daemon alone does not stop an agent. Use `ff stop RUN_ID` (cascade is the default in the pinned CLI).
 
 One specifier, at most two attempts for the one contract item, 20 minutes per attempt. The allowance
 bounds agent attempts, not dollars. No monetary ceiling is asserted. No public API or web UI is enabled.

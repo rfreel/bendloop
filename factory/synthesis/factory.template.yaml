@@ -29,6 +29,7 @@ providers:
     sandbox: workspace-write
     accounts: none
 roles:
+  coordinator: {provider: codex, timeout_minutes: 20, subagents: []}
   specifier:
     provider: codex
     timeout_minutes: 20

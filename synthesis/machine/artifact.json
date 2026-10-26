@@ -1,0 +1,54 @@
+{
+  "schema": "bendloop-artifact-binding-v1",
+  "isa": "x86-64",
+  "abi": "System V AMD64, Linux ELF64 PIE",
+  "artifact": "interpreter.elf.b64",
+  "sha256": "d2cf16edd8fc35ed69324876c36089d2a5f24f95d5db22ce10e7152e5e55d946",
+  "bytes": 50160,
+  "entry_offset": 14208,
+  "load_segments": [
+    {
+      "offset": 0,
+      "vaddr": 0,
+      "filesz": 5216,
+      "memsz": 5216,
+      "flags": 4,
+      "align": 4096
+    },
+    {
+      "offset": 8192,
+      "vaddr": 8192,
+      "filesz": 21609,
+      "memsz": 21609,
+      "flags": 5,
+      "align": 4096
+    },
+    {
+      "offset": 32768,
+      "vaddr": 32768,
+      "filesz": 4864,
+      "memsz": 4864,
+      "flags": 4,
+      "align": 4096
+    },
+    {
+      "offset": 40064,
+      "vaddr": 44160,
+      "filesz": 1512,
+      "memsz": 101088,
+      "flags": 6,
+      "align": 4096
+    }
+  ],
+  "source_revision": "ed8a575c12ac35ee4d3cc09e79c6dd3114eb69e9",
+  "sources": {
+    "synthesis/interpreter/runtime.bend": "292f4b79f7d28cf095e0d0ce51b5398644db37da5d99e7d80fc79f1b1d679c63",
+    "synthesis/interpreter/main.bend": "2c131a53da68b51866885f30afab35d97f91fc3de3103049763a844fe3975ffd",
+    "toolchain.lock": "2de45c7a96c8fcd56e3c7e7b020e80ecfae741ed3e8fc564d13a2d38e39c47d9"
+  },
+  "generated_c_sha256": "607eefb6be24d9b9b3ef8989271e7c298392dd20734cd55a89412268e85aa6d5",
+  "scope": "fixed native interpreter witness; not a JSON or arbitrary-program entry point",
+  "binary_refinement": "NOT_PROVED",
+  "loading_satisfiability": "NOT_PROVED",
+  "boot_loader": "NOT_CHECKED"
+}

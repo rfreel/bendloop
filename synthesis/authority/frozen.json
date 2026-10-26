@@ -1,0 +1,26 @@
+{
+  "id": "bendloop-synth4-implementation-v1",
+  "source_revision": "ed8a575c12ac35ee4d3cc09e79c6dd3114eb69e9",
+  "sha256": {
+    "synthesis/spec/SPEC.md": "47a3e9b0b22d6f15ecb7c86c3fa94f7f179fb35a1c29eeac7d24368dc5ba8ad8",
+    "synthesis/spec/model.bend": "221dbd182b58b2007f0baa75455d901113be1a4dd4318366d78b98dcfb4ce7c9",
+    "synthesis/spec/cases.json": "ea437e32eaee72955e62c64bb8bf0e25448ee8b20fea2878e03bed3e22f43c6f",
+    "synthesis/spec/check_model.py": "aee62fefc487d70b9d0b775fdca4d9c7e33e4e2cf56a316df15e2261fa8b60d9",
+    "synthesis/interpreter/LAWS.bend": "95355b6aa7b713de4577ebe0719a5806ce4d3a6de9e2c0e61929ac0d9c0e8fb9",
+    "synthesis/interpreter/bridge.bend": "80cc852bc1614f1d5672f50f85fead515c708aa02f129b419943432df88ba61a",
+    "synthesis/interpreter/verify.py": "39f9cc0b3cf1daee0c676003fbeef60dbbf7f3bc46fc63385b7a1e7a8c7ce4cf",
+    "synthesis/interpreter/main.bend": "2c131a53da68b51866885f30afab35d97f91fc3de3103049763a844fe3975ffd",
+    "scripts/verify.py": "383f27ade5976c9213b953019fa574b374d13dc5c232cd502c20bea97c006e85",
+    "toolchain.lock": "2de45c7a96c8fcd56e3c7e7b020e80ecfae741ed3e8fc564d13a2d38e39c47d9",
+    "synthesis/authority/REVIEW.md": "5d7aff4573400b440943a69825f256b76ac8fcc51431d9273b3abe38da34518c",
+    "synthesis/authority/check.py": "8b6591c8f6d194b7c50bbe31ec3038b5540f3f259f852481d2e98ca3ffba81e0",
+    "synthesis/certificates/LAWS.bend": "9de7f846cee2bf0634f9ef8ac9c4dee6681a1399a666c4e871cb4deacb1e1592",
+    "synthesis/certificates/verify.py": "baaf72b7eacde0f616f7a44485529b7beb9cb5716a4a822ed8b322bdc269ab55",
+    "synthesis/search/verify.py": "d3d47ed58cae7ade21af518bc7a5cf9b2cb9a5c482267eb02f4e93b241177928",
+    "synthesis/machine/artifact.json": "abcd97bdae9680c795bcee431c49cadc36c28d031279315d0e67a7aa34eab451",
+    "synthesis/machine/check_binding.py": "f9eb498f8e11bf665ef04d387d24a4c15cce6e95f0bf9fd610349c026ae09c2b",
+    "synthesis/machine/OBLIGATION.md": "effb26793a95c875dd1fa81a0772b00381c7453d18a8b6536e24462e7bdb5b83",
+    "synthesis/authority/release.py": "1d0323a79034d2056b7aedbd8150f23f9d83eff96ec5e0c527d86ed2dd35320e",
+    "synthesis/authority/stage.py": "cbd08ced65fd1e5c8fc3790a7245bb72f0f783fd9ab469e9df066bf010b3bc04"
+  }
+}

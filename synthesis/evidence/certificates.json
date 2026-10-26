@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "typed certificates, not JSON replay or search",
+  "stages": [
+    "kernel",
+    "native-certificates-and-counterexamples",
+    "rejected:disconnected_evaluator",
+    "rejected:skip_last_input"
+  ],
+  "pairs": 511,
+  "equivalent": 41,
+  "different": 470,
+  "sources": {
+    "synthesis/certificates/equality.bend": "1191c36260cde5781b7345fb49850e25b73d79212274a30889c1c78ede03fdfa",
+    "synthesis/certificates/runtime.bend": "dc1976eb1a990f963888fc419a2b600bdc5ce2a9845a5f440368b88338f22d8f",
+    "synthesis/certificates/PROOF.bend": "c635e5794e9a5a28e9ad9840a7de8250d229bfa8d75dd564fe1455f0c12c21a9",
+    "synthesis/certificates/LAWS.bend": "9de7f846cee2bf0634f9ef8ac9c4dee6681a1399a666c4e871cb4deacb1e1592",
+    "synthesis/certificates/verify.py": "baaf72b7eacde0f616f7a44485529b7beb9cb5716a4a822ed8b322bdc269ab55"
+  },
+  "artifacts": {
+    "native.log": "b29025d1ce1be3d091756600c0d281fedaecf3bb6156bae1ccc98b9146fe7493",
+    "skip_last_input.log": "ce30dc6ce653a79f145ecee1291d1ba9162449ff3ba51a9f222d3a6ac852a975",
+    "build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "translation.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected.txt": "b29025d1ce1be3d091756600c0d281fedaecf3bb6156bae1ccc98b9146fe7493",
+    "disconnected_evaluator.log": "2351fc38141490c3f855c1ea0efcb0e7f93dde621d3f3c637832e6974a477b7d",
+    "fixture.bend.txt": "eb2888755ae72a031128f2b499bf9b7b2ba8d47bd2c064a25b54a05591c04dbb",
+    "fixture": "0f8e9aade91115611d4aff731c17771866ea4be69574470d9ef24df575b3a36a",
+    "PROOF.bendtt": "d98b00d939397c8d768db72c90b9e334c66f2739c55cf6500864298e0edff609",
+    "kernel.log": "61b73cda11b6b665b9f99f2defd3d3b57f985c865225e942a5bdaa594a503e47"
+  }
+}

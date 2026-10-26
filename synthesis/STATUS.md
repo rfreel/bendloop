@@ -1,33 +1,37 @@
-# Implementation checkpoint
+# Implementation status
 
-The four-bit specification and interpreter source contract retain their reviewed bytes.
-`authority/frozen.json` pins the reviewed contract. The factory-owned external copy is the
-acceptance authority; candidate-side edits cannot change it.
+The reviewed four-bit semantics, interpreter laws, bridge and independent original oracles
+are unchanged. The external factory authority now also enforces the JSON boundary tests,
+three search laws, their negative controls and the RV64 artifact binding.
 
 Implemented and checked:
 
-- Typed certificates check all sixteen inputs against the actual interpreter evaluator.
-  Six public certificate laws include soundness, completeness and composition with
-  `result_transport`. Kernel checking and 511 independent native cases pass. Both a
-  disconnected-evaluator mutant and a missing-input mutant are rejected.
-- Deterministic enumeration orders candidates by size and then prefix tokens. Bounded search
-  charges each attempted candidate and retains an evaluator-certified incumbent.
-  Independent tests cover 3,136 searches, 918 enumerated expressions and a resume sequence.
-- JSON serialization emits search state and portable certificate fields. This is output only.
-- The existing fixed native interpreter witness has an exact ELF byte binding. It does not
-  expose a general interpreter process entry and has no binary-refinement theorem.
+- Typed certificate soundness/completeness composed with `result_transport`; 511 independent
+  native cases and disconnected-evaluator/missing-input mutation rejection.
+- Deterministic enumeration and bounded search, independently checked over 3,136 searches
+  and 918 expressions. `start_valid`, `resume_composes` and `budget_conserved` kernel-check.
+  Skipped-charge, created-credit and zero-quota-step mutants fail those laws.
+- Native JSON stdin/stdout commands `eval`, `synthesize` and `replay`, including UTF-8, the
+  64 KiB limit, schema/type/range/AST validation, certificate recomputation and exit codes.
+  The boundary suite includes 224 evals, 3,136 searches, 768 successful replays, frozen fixtures
+  and forged/malformed inputs. Parsing and portable replay do not yet have universal proofs.
+- A freestanding 224-byte RV64I evaluator accepts arbitrary admitted prefix programs through
+  one LP64 function entry. Exact ELF reproduction and independent emulation pass, including
+  14,720 valid executions, eight invalid cases and memory/register checks. Loading assumptions
+  and a concrete runnable entry example are recorded separately from source proofs.
 
-Still required for completion:
+Remaining proof work:
 
-1. Universal enumeration, reachable-state, conservation, resume, ranking and status laws.
-2. Native JSON stdin parser/schema validation and portable certificate replay, including
-   independent rejection tests. No parser exists yet; no byte-to-typed-value proof is claimed.
-   The frozen spec requires <=64KiB, exact keys, integer tokens, no duplicate keys, and rejection
-   of booleans/floats in integer fields. JSON parsing must stay outside the proof claim until
-   a parser bridge is itself proved. Python is only an independent test oracle.
-3. A general emitted interpreter entry, concrete ISA semantics, machine loading relation,
-   nonempty loading witness, binary execution refinement and separately checked boot/loader
-   assumptions. See `machine/OBLIGATION.md`.
+1. Universal enumeration, exact visited-prefix, best-prefix and status laws.
+2. Universal portable replay soundness and serialization/replay round-trip. Parser formal
+   scope remains explicit; native parser tests are not a byte-level proof.
+3. Reverse-prefix evaluation refinement to Bend's source evaluator, then actual RV64/Sail
+   execution refinement, a proved nonempty loading relation and separately checked boot/loading.
 
-The successful component checks are not full acceptance. `authority/release.py` deliberately
-returns an incomplete verdict until these obligations have actual checked implementations.
+The pinned Sail backend build failed before elaboration because this runner denies Lean's
+`/proc/<PID>/exe` lookup. This infrastructure failure does not reject a proof and does not
+block the cached BendTT source checker. No compiler/kernel was patched to obtain a pass.
+
+Supersedes: the dynamic x86 fixed-witness ELF as proof target -> the freestanding RV64I
+artifact. The historical x86 binding is retained; the x86 JSON CLI remains independently tested.
+The full release still fails closed. Passing the component gate does not claim full completion.

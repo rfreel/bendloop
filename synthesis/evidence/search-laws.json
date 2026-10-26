@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "laws": [
+    "start_valid",
+    "resume_composes",
+    "budget_conserved"
+  ],
+  "rejected_mutations": [
+    "skipped_charge",
+    "credit_creation",
+    "zero_quota_steps"
+  ],
+  "sources": {
+    "synthesis/search/runtime.bend": "72bd4accf30dd2071663c7806d15e1a61d09343eb23e7f5f728a76ee62e82cde",
+    "synthesis/search/grammar.bend": "b0b798e264aa759d319dc9c48ea63d87e4f033d98d2b60518ea0a8b7c692dbd9",
+    "synthesis/search/accounting.bend": "2b9765eecb55d00da8db99f667d6e59882f1a2d1dfa6be245c3877bde1f73d01",
+    "synthesis/search/PROOF.bend": "e511e92879f37d2d0ce4f2fc648b673a14af61d1ccab2a7ca5c686a2527b6bf4",
+    "synthesis/search/render.bend": "7a4feaf39105d2998a0d19aa00abb239b3a2f575f7b432e8869f57a0e10e0fb7",
+    "synthesis/search/main.bend": "a0d62c73873eeb0f3a8fdfb41adfbc9963d49e1ef36f28fd7f4b3a0b513433b7",
+    "synthesis/search/LAWS.bend": "b7af4d0b4299e45eb7ff9f612af5112349e94bd1937e7ff1c5e290d4c0d87e81"
+  }
+}

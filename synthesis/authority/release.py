@@ -5,9 +5,9 @@ and the resulting acceptance contract reviewed. A status flag cannot unlock rele
 """
 import json
 raise SystemExit(json.dumps({'status':'INCOMPLETE','missing':[
- 'universal enumeration and search laws',
- 'native JSON input, validation and portable replay',
- 'general interpreter binary execution refinement',
+ 'universal enumeration, exact-prefix, best-prefix and status laws',
+ 'universal portable replay soundness and serialization round-trip',
+ 'RV64I interpreter binary execution refinement',
  'nonempty concrete machine-loading witness',
  'separately checked boot/loader assumptions'
 ]}))

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "independent emulation of exact ELF; not a formal refinement proof",
+  "valid_executions": 14720,
+  "invalid_executions": 8,
+  "memory_accesses_checked": {
+    "reads": 90537,
+    "writes": 45268
+  },
+  "elapsed_seconds": 0.7905277539975941,
+  "artifact_sha256": "7d9c75f7a44494d74f973abb6b5c79b3bcb8abb294b6f8b6ba719fea79ae9b5b",
+  "concrete_loading_example": {
+    "pc": 2147483648,
+    "ra": 2147487744,
+    "a0": 2164260864,
+    "a1": 1,
+    "a2": 7,
+    "a3": 2181038080,
+    "tokens": [
+      0
+    ],
+    "result": [
+      7,
+      0
+    ]
+  },
+  "loader_assumptions": [
+    "ELF copied to declared RX segment",
+    "caller buffers mapped, aligned and disjoint",
+    "return address executable",
+    "Unicorn RV64 semantics and host memory operations trusted"
+  ],
+  "formal_loading_witness": false,
+  "formal_binary_refinement": false
+}

@@ -9,6 +9,9 @@ commands=[
  [sys.executable,'synthesis/certificates/verify.py','--tools','/tmp/bendloop-tools'],
  [sys.executable,'synthesis/search/verify.py','--tools','/tmp/bendloop-tools'],
  [sys.executable,'synthesis/machine/check_binding.py'],
+ [sys.executable,'synthesis/search/check_laws.py','--tools','/tmp/bendloop-tools'],
+ [sys.executable,'synthesis/json/check.py','--tools','/tmp/bendloop-tools'],
+ [sys.executable,'synthesis/machine/rv64/check.py','--tools','/tmp/bendloop-tools'],
 ]
 for cmd in commands:subprocess.run(cmd,check=True)
 print('PASS: component gate only; synthesis/authority/release.py remains INCOMPLETE')

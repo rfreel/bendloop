@@ -1,0 +1,28 @@
+{
+  "schema": "bendloop-rv64-target-v1",
+  "isa": "RV64I",
+  "abi": "RISC-V LP64 integer function call",
+  "entry": 2147483648,
+  "artifact": "interpreter.elf.b64",
+  "artifact_sha256": "7d9c75f7a44494d74f973abb6b5c79b3bcb8abb294b6f8b6ba719fea79ae9b5b",
+  "text_bytes": 224,
+  "sources": {
+    "synthesis/machine/rv64/evaluator.S": "c42aca5dfc45e7302d43fe017cd1d7e8971ca321053e437dc4f5c5feaf912718",
+    "synthesis/machine/rv64/layout.ld": "92e90aef8f7944e69d204262826da551fd131981eca5e89948c01e9a3432b955",
+    "synthesis/interpreter/runtime.bend": "292f4b79f7d28cf095e0d0ce51b5398644db37da5d99e7d80fc79f1b1d679c63"
+  },
+  "clang_sha256": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45",
+  "linker_sha256": "d32d5121d96810b624306e48faacc75e41f7302ad0e4865be63c3bbf8f4cd810",
+  "formal_model": {
+    "repo": "https://github.com/BasisResearch/ship-your-interpreter",
+    "revision": "fb07094cff916318c34b07494a7d739f1e53989b",
+    "module": "Vsa.Sim.ExecuteAlu",
+    "lean": "4.34.0"
+  },
+  "emulator": {
+    "package": "unicorn",
+    "version": "2.1.4",
+    "wheel_sha256": "9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239"
+  },
+  "binary_refinement": "NOT_PROVED"
+}

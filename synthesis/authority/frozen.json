@@ -1,5 +1,5 @@
 {
-  "id": "bendloop-synth4-implementation-v1",
+  "id": "bendloop-synth4-implementation-v2",
   "source_revision": "ed8a575c12ac35ee4d3cc09e79c6dd3114eb69e9",
   "sha256": {
     "synthesis/spec/SPEC.md": "47a3e9b0b22d6f15ecb7c86c3fa94f7f179fb35a1c29eeac7d24368dc5ba8ad8",
@@ -20,6 +20,19 @@
     "synthesis/machine/artifact.json": "abcd97bdae9680c795bcee431c49cadc36c28d031279315d0e67a7aa34eab451",
     "synthesis/machine/check_binding.py": "f9eb498f8e11bf665ef04d387d24a4c15cce6e95f0bf9fd610349c026ae09c2b",
     "synthesis/machine/OBLIGATION.md": "effb26793a95c875dd1fa81a0772b00381c7453d18a8b6536e24462e7bdb5b83",
+    "synthesis/authority/release.py": "e1602c44ce02d97be076576b4b8a756954198eea7ece39fc7ad2cfbb415d879c",
+    "synthesis/authority/stage.py": "7824424c73bbdde138f63a19bda2d35ada4f930ee782508efe810b9b4db3fa02",
+    "synthesis/search/LAWS.bend": "b7af4d0b4299e45eb7ff9f612af5112349e94bd1937e7ff1c5e290d4c0d87e81",
+    "synthesis/search/check_laws.py": "bb4d704a7a1e6cda7aa72336ac46a89582e1a294a3b9297b53f5bc42bdbd8ee5",
+    "synthesis/json/check.py": "fe7998a910d36f77f7dd3b38f6e1e8277d0ec78db707971068b82e6a551a514c",
+    "synthesis/json/verify.py": "8c96492104e932e6c65f99758635ee13a85b28c3f224369e9ffb5e58fb0f82ac",
+    "synthesis/json/README.md": "1b4f0ca26a2caaef963703a519e6c4e2034f13385ea035ec9bc97407589cf4ee",
+    "synthesis/machine/rv64/target.json": "6f4ca12dd014e9a10cedf019faf70c5d885dfd28bc7ba9b91fcd45d2b6e64616",
+    "synthesis/machine/rv64/check.py": "5ca64dd191792c07336c59bc28c6ec9d1fe72cd2c81fd6c04389f717e9b56276",
+    "synthesis/machine/rv64/verify.py": "6422ebfd3b3ce7b1c9a0c07e6ff10556b52f0f455570345a5f8486c308c33262",
+    "synthesis/machine/rv64/README.md": "b5a5c1bca27924b2d09726e97336aa824f00e4194d1ce4f541c39e33321850c9"
+  },
+  "superseded_checks": {
     "synthesis/authority/release.py": "1d0323a79034d2056b7aedbd8150f23f9d83eff96ec5e0c527d86ed2dd35320e",
     "synthesis/authority/stage.py": "cbd08ced65fd1e5c8fc3790a7245bb72f0f783fd9ab469e9df066bf010b3bc04"
   }

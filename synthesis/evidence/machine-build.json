@@ -1,0 +1,10 @@
+{
+  "status": "INFRASTRUCTURE_FAILURE",
+  "backend_revision": "fb07094cff916318c34b07494a7d739f1e53989b",
+  "lean": "4.34.0",
+  "command": "lake build Vsa.Compiler.Run",
+  "exit_code": 1,
+  "diagnostic": "error: failed to locate application",
+  "independent_observation": "/proc/self/exe resolves; /proc/<os.getpid()>/exe raises PermissionError (errno 13)",
+  "proof_rejection": false
+}

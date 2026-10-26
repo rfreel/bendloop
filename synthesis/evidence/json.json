@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "counts": {
+    "eval": 224,
+    "search": 3136,
+    "replay": 768,
+    "invalid": 25,
+    "syntax": 3
+  },
+  "elapsed_seconds": 10.432780242001172,
+  "binary_sha256": "827353a5738cc2e4220ba1b94cb604c54b92a2f315fc2fe193fd282bd33aa31d",
+  "sources": {
+    "synthesis/json/schema.bend": "23f91acbe2247e5e425402e404b4927165176c33470d0642e1841daad3070647",
+    "synthesis/json/api.bend": "07c3dbe791b81ae144beef4802db1a45d7e209e3fb43984dd87064ba6ab2cc7a",
+    "synthesis/json/utf8.bend": "d6abc3d6ec6f13c171f8d70ac84cf4fc8c166921fa48ba65e7ac4bb30918be00",
+    "synthesis/json/parser.bend": "81f295d59948b833de6c2df14d18d3a08c2ec1d2e1410a6609afe2618200aab7",
+    "synthesis/json/main.bend": "27923e99f9bb1fdca0c69203b813f224efe80dd822d7e734dcd033148496b986"
+  },
+  "formal_scope": "native boundary tests; no universal parser or replay theorem"
+}

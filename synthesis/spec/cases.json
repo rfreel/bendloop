@@ -1,0 +1,1169 @@
+[
+  {
+    "id": "input",
+    "kind": "eval",
+    "program": [
+      0
+    ],
+    "expected_outputs": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "zero",
+    "kind": "eval",
+    "program": [
+      1
+    ],
+    "expected_outputs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "ones",
+    "kind": "eval",
+    "program": [
+      16
+    ],
+    "expected_outputs": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "id": "not_input",
+    "kind": "eval",
+    "program": [
+      17,
+      0
+    ],
+    "expected_outputs": [
+      15,
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  {
+    "id": "not_zero",
+    "kind": "eval",
+    "program": [
+      17,
+      1
+    ],
+    "expected_outputs": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "id": "not_ones",
+    "kind": "eval",
+    "program": [
+      17,
+      16
+    ],
+    "expected_outputs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "double_not",
+    "kind": "eval",
+    "program": [
+      17,
+      17,
+      0
+    ],
+    "expected_outputs": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "and_mask",
+    "kind": "eval",
+    "program": [
+      18,
+      0,
+      6
+    ],
+    "expected_outputs": [
+      0,
+      1,
+      0,
+      1,
+      4,
+      5,
+      4,
+      5,
+      0,
+      1,
+      0,
+      1,
+      4,
+      5,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "or_mask",
+    "kind": "eval",
+    "program": [
+      19,
+      0,
+      11
+    ],
+    "expected_outputs": [
+      10,
+      11,
+      10,
+      11,
+      14,
+      15,
+      14,
+      15,
+      10,
+      11,
+      10,
+      11,
+      14,
+      15,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "xor_mask",
+    "kind": "eval",
+    "program": [
+      20,
+      0,
+      6
+    ],
+    "expected_outputs": [
+      5,
+      4,
+      7,
+      6,
+      1,
+      0,
+      3,
+      2,
+      13,
+      12,
+      15,
+      14,
+      9,
+      8,
+      11,
+      10
+    ]
+  },
+  {
+    "id": "xor_self",
+    "kind": "eval",
+    "program": [
+      20,
+      0,
+      0
+    ],
+    "expected_outputs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "and_zero",
+    "kind": "eval",
+    "program": [
+      18,
+      0,
+      1
+    ],
+    "expected_outputs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "not_xor",
+    "kind": "eval",
+    "program": [
+      17,
+      20,
+      0,
+      6
+    ],
+    "expected_outputs": [
+      10,
+      11,
+      8,
+      9,
+      14,
+      15,
+      12,
+      13,
+      2,
+      3,
+      0,
+      1,
+      6,
+      7,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "xor_complement_mask",
+    "kind": "eval",
+    "program": [
+      20,
+      0,
+      11
+    ],
+    "expected_outputs": [
+      10,
+      11,
+      8,
+      9,
+      14,
+      15,
+      12,
+      13,
+      2,
+      3,
+      0,
+      1,
+      6,
+      7,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "zero_budget",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 0
+    },
+    "expected": {
+      "status": "BudgetExhausted",
+      "candidate": null,
+      "spent": 0,
+      "left": 0,
+      "cursor": 0
+    }
+  },
+  {
+    "id": "first_mismatch",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 1
+    },
+    "expected": {
+      "status": "BudgetExhausted",
+      "candidate": null,
+      "spent": 1,
+      "left": 0,
+      "cursor": 1
+    }
+  },
+  {
+    "id": "find_zero",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 2
+    },
+    "expected": {
+      "status": "BudgetExhausted",
+      "candidate": [
+        1
+      ],
+      "spent": 2,
+      "left": 0,
+      "cursor": 2
+    }
+  },
+  {
+    "id": "finish_with_credit",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 20
+    },
+    "expected": {
+      "status": "SpaceExhausted",
+      "candidate": [
+        1
+      ],
+      "spent": 17,
+      "left": 3,
+      "cursor": 17
+    }
+  },
+  {
+    "id": "finish_at_cap",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 17
+    },
+    "expected": {
+      "status": "SpaceExhausted",
+      "candidate": [
+        1
+      ],
+      "spent": 17,
+      "left": 0,
+      "cursor": 17
+    }
+  },
+  {
+    "id": "no_strict_improvement",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 20
+    },
+    "expected": {
+      "status": "SpaceExhausted",
+      "candidate": null,
+      "spent": 17,
+      "left": 3,
+      "cursor": 17
+    }
+  },
+  {
+    "id": "no_solution_in_leaves",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        17,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 20
+    },
+    "expected": {
+      "status": "SpaceExhausted",
+      "candidate": null,
+      "spent": 17,
+      "left": 3,
+      "cursor": 17
+    }
+  },
+  {
+    "id": "not_zero_before_last",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        17,
+        1
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 16
+    },
+    "expected": {
+      "status": "BudgetExhausted",
+      "candidate": null,
+      "spent": 16,
+      "left": 0,
+      "cursor": 16
+    }
+  },
+  {
+    "id": "not_zero_last",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        17,
+        1
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 17
+    },
+    "expected": {
+      "status": "SpaceExhausted",
+      "candidate": [
+        16
+      ],
+      "spent": 17,
+      "left": 0,
+      "cursor": 17
+    }
+  },
+  {
+    "id": "simplify_double_not",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        17,
+        17,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 1
+    },
+    "expected": {
+      "status": "BudgetExhausted",
+      "candidate": [
+        0
+      ],
+      "spent": 1,
+      "left": 0,
+      "cursor": 1
+    }
+  },
+  {
+    "id": "reference_ops_need_not_be_allowed",
+    "kind": "synthesize",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        1
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 1
+    },
+    "expected": {
+      "status": "BudgetExhausted",
+      "candidate": [
+        0
+      ],
+      "spent": 1,
+      "left": 0,
+      "cursor": 1
+    }
+  },
+  {
+    "id": "resume_with_zero_and_overshoot",
+    "kind": "advance",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 20
+    },
+    "quotas": [
+      0,
+      1,
+      0,
+      1,
+      100
+    ],
+    "expected_steps": [
+      {
+        "spent": 0,
+        "left": 20,
+        "status": "Paused",
+        "candidate": null
+      },
+      {
+        "spent": 1,
+        "left": 19,
+        "status": "Paused",
+        "candidate": null
+      },
+      {
+        "spent": 1,
+        "left": 19,
+        "status": "Paused",
+        "candidate": null
+      },
+      {
+        "spent": 2,
+        "left": 18,
+        "status": "Paused",
+        "candidate": [
+          1
+        ]
+      },
+      {
+        "spent": 17,
+        "left": 3,
+        "status": "SpaceExhausted",
+        "candidate": [
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "missing_child",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        17
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "trailing_token",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "unknown_token",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        21
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "negative_token",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        -1
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "zero_bound",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 0,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "oversized_bound",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 8,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "negative_budget",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": -1
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "oversized_budget",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 1000001
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "duplicate_ops",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [
+        17,
+        17
+      ],
+      "max_nodes": 1,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "unordered_ops",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [
+        20,
+        17
+      ],
+      "max_nodes": 1,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "unknown_op",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [
+        21
+      ],
+      "max_nodes": 1,
+      "budget": 10
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "bool_budget",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": true
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "float_budget",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 1.0
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "unknown_key",
+    "kind": "invalid_request",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 10,
+      "extra": 0
+    },
+    "expected_exit": 2
+  },
+  {
+    "id": "duplicate_json_key",
+    "kind": "invalid_json",
+    "raw": "{\"schema\":\"bendloop-synth4-v1\",\"reference\":[0],\"allowed_ops\":[],\"max_nodes\":1,\"budget\":0,\"budget\":1}",
+    "expected_exit": 2
+  },
+  {
+    "id": "replay_zero",
+    "kind": "replay",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 2
+    },
+    "certificate": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "candidate": [
+        1
+      ],
+      "candidate_cost": 0,
+      "outputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": "VerifiedImprovement"
+  },
+  {
+    "id": "forged_cost",
+    "kind": "replay",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 2
+    },
+    "certificate": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "candidate": [
+        1
+      ],
+      "candidate_cost": 1,
+      "outputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": "InvalidCertificate",
+    "expected_exit": 2
+  },
+  {
+    "id": "wrong_reference",
+    "kind": "replay",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 2
+    },
+    "certificate": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        0
+      ],
+      "candidate": [
+        1
+      ],
+      "candidate_cost": 0,
+      "outputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": "InvalidCertificate",
+    "expected_exit": 2
+  },
+  {
+    "id": "wrong_candidate",
+    "kind": "replay",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 2
+    },
+    "certificate": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "candidate": [
+        0
+      ],
+      "candidate_cost": 0,
+      "outputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": "InvalidCertificate",
+    "expected_exit": 2
+  },
+  {
+    "id": "short_table",
+    "kind": "replay",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 2
+    },
+    "certificate": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "candidate": [
+        1
+      ],
+      "candidate_cost": 0,
+      "outputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": "InvalidCertificate",
+    "expected_exit": 2
+  },
+  {
+    "id": "skipped_last_input",
+    "kind": "replay",
+    "request": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "allowed_ops": [],
+      "max_nodes": 1,
+      "budget": 2
+    },
+    "certificate": {
+      "schema": "bendloop-synth4-v1",
+      "reference": [
+        20,
+        0,
+        0
+      ],
+      "candidate": [
+        1
+      ],
+      "candidate_cost": 0,
+      "outputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "expected": "InvalidCertificate",
+    "expected_exit": 2
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "scope": "reference model only",
+  "status": "PASS",
+  "evaluations": 224,
+  "sources": {
+    "model.bend": "221dbd182b58b2007f0baa75455d901113be1a4dd4318366d78b98dcfb4ce7c9",
+    "cases.json": "ea437e32eaee72955e62c64bb8bf0e25448ee8b20fea2878e03bed3e22f43c6f",
+    "check_model.py": "aee62fefc487d70b9d0b775fdca4d9c7e33e4e2cf56a316df15e2261fa8b60d9"
+  },
+  "artifacts": {
+    "observed.txt": "99d579e67db4115cb8fe993d03aaeafdeb39c0c209bd381fee2df1abf2361732",
+    "build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected.txt": "99d579e67db4115cb8fe993d03aaeafdeb39c0c209bd381fee2df1abf2361732",
+    "fixture.bend.txt": "4d31846a4510f40e740bc8fcc13f4cf7b6bb65913471624f9e7eb16f125a1098",
+    "fixture": "594155dc2952760e6993ed4cf92930c4e761d1d27a4293059032f8d9bbec9e4d",
+    "kernel.log": "61b73cda11b6b665b9f99f2defd3d3b57f985c865225e942a5bdaa594a503e47"
+  }
+}

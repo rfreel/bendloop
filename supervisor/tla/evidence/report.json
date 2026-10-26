@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "scope": "finite protocol model; no Bend/host refinement theorem",
+  "runs": [
+    {
+      "name": "with-fallback",
+      "config": "Small.cfg",
+      "states_generated": 7831929,
+      "distinct_states": 276144,
+      "log_sha256": "57cdc39513af0ddb492a0c629013329cd9ffa003d22daa695257ca9bff2afa02"
+    },
+    {
+      "name": "without-fallback",
+      "config": "NoFallback.cfg",
+      "states_generated": 3177633,
+      "distinct_states": 122496,
+      "log_sha256": "aa26939da706467f6ef3ac223b653dc2e046ec43268ad13d1a24f4c5281eeba5"
+    },
+    {
+      "name": "zero-budget-fallback",
+      "config": "ZeroFallback.cfg",
+      "states_generated": 251552,
+      "distinct_states": 9174,
+      "log_sha256": "b8057e0d3e6e994ed7ff325b072b0285fd57613ef951246ef42ed09f63bdce63"
+    },
+    {
+      "name": "zero-budget-failure",
+      "config": "ZeroFailure.cfg",
+      "states_generated": 94419,
+      "distinct_states": 3696,
+      "log_sha256": "19921b7808f7d1086d3de816ae249e932d798dc000b8faf3b45ac4f655fb1e45"
+    }
+  ],
+  "negative_controls": [
+    {
+      "name": "worker_approval",
+      "invariant": "EvidenceBinding",
+      "exit_code": 12,
+      "log_sha256": "f3449a6055ce136d872bdbdea228523bfed40d7496db1aa38f2d796f3df57f13"
+    },
+    {
+      "name": "snapshot_mismatch",
+      "invariant": "ExactFrozenEvidence",
+      "exit_code": 12,
+      "log_sha256": "f31d0636b2ac9a98cb263d7603acc5a790df954123eee81d1cf99d39daa885da"
+    },
+    {
+      "name": "stale_admission",
+      "invariant": "Admission",
+      "exit_code": 12,
+      "log_sha256": "a2e32659bc872653dc462363788aec81dac3438c23e3cd5e71493c33b82cd3f8"
+    },
+    {
+      "name": "stale_broker",
+      "invariant": "NoStaleCommit",
+      "exit_code": 12,
+      "log_sha256": "7d95d5e8ba6f5b5bee899d493e3851e1ef983c0c2d130c146b1888fc70452040"
+    },
+    {
+      "name": "forbidden_effect",
+      "invariant": "EffectConfinement",
+      "exit_code": 12,
+      "log_sha256": "d643fabfb65cfab9514e29f5c1587978a974cb748ce6256a81f73ae41c46dee6"
+    },
+    {
+      "name": "created_credit",
+      "invariant": "BudgetConservation",
+      "exit_code": 12,
+      "log_sha256": "0ea9c89c9319224f1c635a50d1a920052157c9d5d79d7c8c3270e671c4dbbeb9"
+    },
+    {
+      "name": "contract_budget_reset",
+      "invariant": "BudgetConservation",
+      "exit_code": 12,
+      "log_sha256": "2e19bb135eca6e1d440002bf02cdb9fec3b0ec0d8c7c6915ecb7447670b80ee9"
+    },
+    {
+      "name": "unbounded_worker",
+      "invariant": "TypeOK",
+      "exit_code": 12,
+      "log_sha256": "7b400f572ed7921e5d0ff0bafb614174ed7dd5d78f96bdfbff0ec44f295f0edb"
+    },
+    {
+      "name": "rule_tamper",
+      "invariant": "ContractIntegrity",
+      "exit_code": 12,
+      "log_sha256": "89646d2eb8a3475435cdc7186676cf7b877b8c53212c19045007b1c9c0900afd"
+    },
+    {
+      "name": "stale_fallback",
+      "invariant": "Admission",
+      "exit_code": 12,
+      "log_sha256": "a561e80583488d7515c150d8ce58c5f28a4687c6b3c1fc1224cb423da5da2575"
+    },
+    {
+      "name": "partial_publish",
+      "invariant": "AtomicPublication",
+      "exit_code": 12,
+      "log_sha256": "291507a1bd194d250de9f44d749aa88340cd99dc3fab2e874910ec4e62775539"
+    },
+    {
+      "name": "wrong_winner",
+      "invariant": "Winner",
+      "exit_code": 12,
+      "log_sha256": "646ab754a594457f065fc19ba7adc4ca0ce9a19b69f373d4e31f8ee53e22b434"
+    }
+  ],
+  "sources": {
+    "ZeroFallback.cfg": "c4889039651533b1e4fdeaf0fd55e483b4a7ed5ec08b564c1fa27b15a9b1a1bb",
+    "Supervisor.tla": "d187b5b9f079b54c0d831b154d13c99063ddf017da06d08f4b12ceb2b1459ecc",
+    "check.py": "b1bc46cd961a4842e5ad52016d0b2988706f80f43245558a1542d32c3a1bbf09",
+    "NoFallback.cfg": "dcab4593f3558e338318b4b0bf59d8a48e1b497a861a694242189a398865602d",
+    "toolchain.json": "4f5adfbd6cd96a5fbc45d71cff78632ad8ad44adf95f629977b1384ba572caf7",
+    "ZeroFailure.cfg": "d2ec8dd9fbd1d82dde014978957a45c1810d236eef619ec41e62716c703e46c5",
+    "Small.cfg": "533393753a435142a5d4a71bf77c9ffb0cb3ed9dda9bc1cbd0e5b3ce6a82334c"
+  },
+  "jar_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+  "java": "openjdk version \"17.0.20\" 2026-07-21\nOpenJDK Runtime Environment (build 17.0.20+8-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20+8-1-24.04-Ubuntu, mixed mode, sharing)",
+  "elapsed_seconds": 110.80667982900923
+}

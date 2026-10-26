@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "adapter": "sort8",
+  "tests": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "p1_sort_journey": true,
+  "scope": "finite real-native interface journey; not all18requirements, usability superiority, or facade proof",
+  "binary_sha256": "bdecaeb6d719979bbd78875e4f69b1d548c4052fd4d9005c5229cd96350c9dac",
+  "elapsed_seconds": 0.7705074349942151,
+  "requirements_status": {
+    "R01": "Partial: receiver intake preserves goal/declaration. English-to-contract fidelity and added-obligation review remain manual.",
+    "R02": "Finite slice: HMAC-chained receiver journal reconstructs this task and checkpoints. No unbounded replay/refinement theorem.",
+    "R03": "Finite slice: claims retain evidence identity, kind, exact scope and dependencies. General projector proof pending.",
+    "R04": "Finite slice: four typed actions share host preconditions between view and dispatcher. General adapter action algebra pending.",
+    "R05": "Finite slice: host-defined contract/checker/incumbent/exact-candidate read sets; unrelated notes do not stale actions. General revision/dependency graph pending.",
+    "R06": "Concrete adapters only: actual pinned Bend decision controls Broker publication; worker claims are never approval. Independent external evaluator service pending.",
+    "R07": "Finite fixed-file scope: content-bound idempotency, durable intents and Broker fencing. External-service leases/exactly-once transactions pending.",
+    "R08": "Partial: ingress/evaluation ceilings serialized; metadata actions are not a hostile-RPC/global journal envelope. Measured time excludes final receipt fsync. Aggregate physical accounting/scheduler pending.",
+    "R09": "Finite slice: reopen/checkpoint and explicit local-effect reconciliation work without chat. General jobs/leases/provider reconciliation pending.",
+    "R10": "Pending: no cross-task reusable-capability index or held-out reuse evaluation.",
+    "R11": "Finite slice: notes/retrieval-like observations cannot mutate contract or authorize acceptance. General retrieval subsystem pending.",
+    "R12": "Finite slice: Completed/Rejected/Inconclusive/Cancelled/EffectUnknown preserve retained work and recovery. Asynchronous Pending jobs and broad causal slicing pending.",
+    "R13": "Concrete checker ordering only; external comparative runtime evidence, frontier portfolio and selection-aware uncertainty pending.",
+    "R14": "Partial: one request, status and recovery need no repeated permissions. Human burden/baseline trials pending.",
+    "R15": "Partial: bounded integer-artifact native wire shared by Expr and sorting adapters. Analysis/document/design positive-negative-inconclusive journeys pending.",
+    "R16": "Bend reducer proofs/native Broker integration remain separately scoped. This Python facade/projector/journal is tested, not kernel proved; model refinement pending.",
+    "R17": "Partial: receiver deadline fallback/failure action is exposed. Fair host scheduler and actual hostile-worker execution remain prerequisites; isolation unavailable here.",
+    "R18": "Partial: private journal key/contracts/fallback are omitted from worker view; no private release-answer fixture/service or exhaustive disclosure proof."
+  },
+  "sources": {
+    "test_interface.py": "9d5c1e83f124ed15a1790ea716714cb62e8baae5b995816ce4f55de5578962cd",
+    "interface.py": "ac0f2592ee7dbd8e0d27a4b89ef4629dd4204a5a2bde2c5bde90556c9aed98ea"
+  }
+}

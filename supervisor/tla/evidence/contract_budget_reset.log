@@ -1,0 +1,119 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 78 and seed -5649260713283318570 with 1 worker on 8 cores with 1067MB heap and 64MB offheap memory [pid: 396] (Linux 6.18.55 amd64, Ubuntu 17.0.20 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /tmp/supervisor-tla-6ea4qtwp/Supervisor.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module Supervisor
+Starting... (2026-10-26 13:38:18)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-10-26 13:38:19.
+Error: Invariant BudgetConservation is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ epoch = 0
+/\ evaluationsSpent = 0
+/\ workerSpent = (w0 :> 0 @@ w1 :> 0)
+/\ outcome = "searching"
+/\ clock = 0
+/\ frozen = none
+/\ pool = {}
+/\ evaluation = none
+/\ bindings = {}
+/\ crashes = 0
+/\ published = none
+/\ up = TRUE
+/\ stamp = 0
+/\ credits = 1
+/\ prepared = none
+/\ incumbent = [epoch |-> 0, artifact |-> "base"]
+/\ inbox = none
+/\ effects = {}
+
+State 2: <Submit line 32, col 11 to line 33, col 185 of module Supervisor>
+/\ epoch = 0
+/\ evaluationsSpent = 0
+/\ workerSpent = (w0 :> 0 @@ w1 :> 0)
+/\ outcome = "searching"
+/\ clock = 0
+/\ frozen = none
+/\ pool = {}
+/\ evaluation = none
+/\ bindings = {}
+/\ crashes = 0
+/\ published = none
+/\ up = TRUE
+/\ stamp = 0
+/\ credits = 1
+/\ prepared = none
+/\ incumbent = [epoch |-> 0, artifact |-> "base"]
+/\ inbox = [artifact |-> "A", worker |-> w0, claimedEpoch |-> 0, review |-> FALSE]
+/\ effects = {}
+
+State 3: <Freeze line 39, col 11 to line 42, col 177 of module Supervisor>
+/\ epoch = 0
+/\ evaluationsSpent = 0
+/\ workerSpent = (w0 :> 0 @@ w1 :> 0)
+/\ outcome = "searching"
+/\ clock = 0
+/\ frozen = [epoch |-> 0, artifact |-> "A"]
+/\ pool = {}
+/\ evaluation = none
+/\ bindings = {}
+/\ crashes = 0
+/\ published = none
+/\ up = TRUE
+/\ stamp = 0
+/\ credits = 1
+/\ prepared = none
+/\ incumbent = [epoch |-> 0, artifact |-> "base"]
+/\ inbox = none
+/\ effects = {}
+
+State 4: <Evaluate line 43, col 13 to line 49, col 155 of module Supervisor>
+/\ epoch = 0
+/\ evaluationsSpent = 1
+/\ workerSpent = (w0 :> 0 @@ w1 :> 0)
+/\ outcome = "searching"
+/\ clock = 0
+/\ frozen = [epoch |-> 0, artifact |-> "A"]
+/\ pool = {}
+/\ evaluation = [snapshot |-> [epoch |-> 0, artifact |-> "A"], qualified |-> TRUE, score |-> 2]
+/\ bindings = {}
+/\ crashes = 0
+/\ published = none
+/\ up = TRUE
+/\ stamp = 0
+/\ credits = 0
+/\ prepared = none
+/\ incumbent = [epoch |-> 0, artifact |-> "base"]
+/\ inbox = none
+/\ effects = {}
+
+State 5: <ContractUpdate line 70, col 19 to line 74, col 187 of module Supervisor>
+/\ epoch = 1
+/\ evaluationsSpent = 1
+/\ workerSpent = (w0 :> 0 @@ w1 :> 0)
+/\ outcome = "searching"
+/\ clock = 0
+/\ frozen = [epoch |-> 0, artifact |-> "A"]
+/\ pool = {}
+/\ evaluation = [snapshot |-> [epoch |-> 0, artifact |-> "A"], qualified |-> TRUE, score |-> 2]
+/\ bindings = {}
+/\ crashes = 0
+/\ published = none
+/\ up = TRUE
+/\ stamp = 1
+/\ credits = 1
+/\ prepared = none
+/\ incumbent = [epoch |-> 1, artifact |-> "base"]
+/\ inbox = none
+/\ effects = {}
+
+11158 states generated, 1284 distinct states found, 986 states left on queue.
+The depth of the complete state graph search is 5.
+The average outdegree of the complete state graph is 4 (minimum is 0, the maximum 31 and the 95th percentile is 6).
+Finished in 00s at (2026-10-26 13:38:19)

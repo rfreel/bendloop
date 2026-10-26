@@ -27,3 +27,16 @@ serialization bridge; full policy trace/retention/recursive-accounting refinemen
 RV64/Sail/loading/boot proofs. Stock Lean fails before elaboration on this runner.
 See synthesis/policy/AUDIT.md for additional experiment-validity limitations.
 No full acceptance, general RSI or exhaustive absence-of-loopholes claim is made.
+
+## Receiver-supervisor and revised-design continuation
+
+Added the TLA+ hostile-message model, generic pure Bend supervisor, actual expression
+and eight-record sorting checker instantiations, fixed-file broker, fail-closed worker
+launcher and durable observe/act/await task facade. The bounded controlled sorting
+P1 journey now includes rejected duplicate loss, an exact native witness, a qualified
+reference, checkpoint/reopen and delivery. Initial fresh-agent trials exposed missing
+operation guidance; revised-view candidate was independently checked and delivered.
+
+This is not completion of all18 revised requirements/P0-P7, hostile runtime deployment,
+unbounded cross-layer refinement, or the original full synth4 release. Their exact
+remaining scopes are recorded in supervisor/ASSURANCE.md and interface.REQUIREMENT_STATUS.

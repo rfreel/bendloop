@@ -58,3 +58,13 @@ transfer, and compares subsequent revision branches. [Typed replay laws](synthes
 now bind accepted portable packets to the actual evaluator and claimed fields.
 These are component results. [The audit](synthesis/policy/AUDIT.md) records remaining
 findings; the full synth4 release still fails closed.
+
+## Receiver-owned supervisor
+
+[supervisor/](supervisor/README.md) adds the bounded TLA+ coordination model,
+Bend-proved admission/effect decisions, a fixed-file broker and a durable
+observe/act/await interface. The controlled sorting journey preserves duplicate
+records, retains failure witnesses and resumes without conversation replay.
+Actual hostile process launch fails closed when required OS isolation is absent.
+See the explicit [assurance boundary](supervisor/ASSURANCE.md); this does not
+complete the original full synth4 release or all cross-domain design stages.

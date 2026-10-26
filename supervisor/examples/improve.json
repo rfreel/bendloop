@@ -1,0 +1,29 @@
+{
+  "task": 7,
+  "epoch": 1,
+  "evaluator": 1,
+  "permission": "publish",
+  "reference": [
+    20,
+    0,
+    0
+  ],
+  "allowed_ops": [
+    17,
+    18,
+    19,
+    20
+  ],
+  "max_nodes": 3,
+  "fallback": [
+    20,
+    0,
+    0
+  ],
+  "candidate": [
+    1
+  ],
+  "budget": 5,
+  "sequence": 1,
+  "phase": "active"
+}

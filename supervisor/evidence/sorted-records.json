@@ -1,0 +1,42 @@
+[
+  {
+    "date": 0,
+    "id": 6,
+    "value": 2
+  },
+  {
+    "date": 0,
+    "id": 8,
+    "value": 1
+  },
+  {
+    "date": 1,
+    "id": 2,
+    "value": 7
+  },
+  {
+    "date": 1,
+    "id": 2,
+    "value": 7
+  },
+  {
+    "date": 2,
+    "id": 3,
+    "value": 8
+  },
+  {
+    "date": 2,
+    "id": 5,
+    "value": 6
+  },
+  {
+    "date": 3,
+    "id": 1,
+    "value": 5
+  },
+  {
+    "date": 3,
+    "id": 4,
+    "value": 9
+  }
+]

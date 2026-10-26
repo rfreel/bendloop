@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "scope": "Finite actual sorting native checks against independent Python ordering, complete-record Counter and tie-preference arithmetic",
+  "binary_sha256": "bdecaeb6d719979bbd78875e4f69b1d548c4052fd4d9005c5229cd96350c9dac",
+  "decisions": 450,
+  "invalid_requests": 7,
+  "inspections": [
+    {
+      "kind": "inspection",
+      "ordered": true,
+      "records_preserved": true,
+      "missing_record": null,
+      "unordered_pair": null
+    },
+    {
+      "kind": "inspection",
+      "ordered": true,
+      "records_preserved": true,
+      "missing_record": null,
+      "unordered_pair": null
+    },
+    {
+      "kind": "inspection",
+      "ordered": true,
+      "records_preserved": false,
+      "missing_record": {
+        "record": [
+          1,
+          1,
+          11
+        ],
+        "expected_count": 2,
+        "observed_count": 1
+      },
+      "unordered_pair": null
+    },
+    {
+      "kind": "inspection",
+      "ordered": true,
+      "records_preserved": false,
+      "missing_record": {
+        "record": [
+          1,
+          1,
+          11
+        ],
+        "expected_count": 2,
+        "observed_count": 1
+      },
+      "unordered_pair": null
+    },
+    {
+      "kind": "inspection",
+      "ordered": true,
+      "records_preserved": false,
+      "missing_record": {
+        "record": [
+          1,
+          1,
+          11
+        ],
+        "expected_count": 2,
+        "observed_count": 1
+      },
+      "unordered_pair": null
+    },
+    {
+      "kind": "inspection",
+      "ordered": false,
+      "records_preserved": true,
+      "missing_record": null,
+      "unordered_pair": {
+        "left_index": 0,
+        "left": [
+          2,
+          2,
+          12
+        ],
+        "right": [
+          1,
+          1,
+          11
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 1.009432792008738
+}

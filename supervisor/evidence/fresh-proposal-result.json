@@ -1,0 +1,251 @@
+{
+  "status": "PASS",
+  "scope": "Inspected candidate from a fresh-agent WorkView-only trial, accepted by actual pinned Bend and receiver broker; not independent authority or OS isolation",
+  "input_records": [
+    {
+      "date": 3,
+      "id": 4,
+      "value": 9
+    },
+    {
+      "date": 1,
+      "id": 2,
+      "value": 7
+    },
+    {
+      "date": 3,
+      "id": 1,
+      "value": 5
+    },
+    {
+      "date": 0,
+      "id": 8,
+      "value": 1
+    },
+    {
+      "date": 2,
+      "id": 5,
+      "value": 6
+    },
+    {
+      "date": 1,
+      "id": 2,
+      "value": 7
+    },
+    {
+      "date": 2,
+      "id": 3,
+      "value": 8
+    },
+    {
+      "date": 0,
+      "id": 6,
+      "value": 2
+    }
+  ],
+  "output_records": [
+    {
+      "date": 0,
+      "id": 6,
+      "value": 2
+    },
+    {
+      "date": 0,
+      "id": 8,
+      "value": 1
+    },
+    {
+      "date": 1,
+      "id": 2,
+      "value": 7
+    },
+    {
+      "date": 1,
+      "id": 2,
+      "value": 7
+    },
+    {
+      "date": 2,
+      "id": 3,
+      "value": 8
+    },
+    {
+      "date": 2,
+      "id": 5,
+      "value": 6
+    },
+    {
+      "date": 3,
+      "id": 1,
+      "value": 5
+    },
+    {
+      "date": 3,
+      "id": 4,
+      "value": 9
+    }
+  ],
+  "mandatory_preservation_independent_counter_check": true,
+  "submission": {
+    "schema_version": "bendloop-action-receipt-v1",
+    "id": "r18",
+    "task_id": "8cfd31a0de154bac8445727e5ceeda48",
+    "idempotency_key": "fresh-view-c-sort8-submit-20261026-01",
+    "action": "submit_candidate",
+    "outcome": "Completed",
+    "code": "COMPLETED",
+    "recovery": "Observe the updated view and choose an admissible next action.",
+    "retained_artifact_ids": [
+      "a0-1",
+      "a0-2"
+    ],
+    "candidate_id": "a0-2",
+    "evidence_ids": [
+      "e17"
+    ],
+    "immutable_result_refs": [
+      {
+        "artifact_id": "receiver-incumbent:de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+        "sha256": "de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4"
+      }
+    ],
+    "causal_witness": null,
+    "cost": {
+      "dispatch_wall_ns": 8134529,
+      "native_transactions": 0,
+      "scope": "actual dispatch through evidence recording; excludes final receipt fsync and response serialization"
+    },
+    "affected_basis": {
+      "contract": "d41ec12a8992a3e0754858d24ad408482a817fb247beef7795f65db17b2eefb6",
+      "checker": "1b0c935cde276e9e3e088a5cd940200597ba049b3b51bed3b872fbb471fbe24b",
+      "incumbent": "receiver-incumbent:de40d268beadf251b4dbf6014c86c527f0da6d01c0c9618aed414dd01a2b5cf4",
+      "frozen": {
+        "a0-1": "4ca36b65b7fec9b8f9c97f20ae22409dd7878bf8a0d23f4e377b855a0671e7b5",
+        "a0-2": "1fb2f75e8ab1039a99e2301be4a21ab2c3d0721b9b842ea9c6b11944d35ac205"
+      }
+    },
+    "outstanding_reservations": []
+  },
+  "evaluation": {
+    "schema_version": "bendloop-action-receipt-v1",
+    "id": "r23",
+    "task_id": "8cfd31a0de154bac8445727e5ceeda48",
+    "idempotency_key": "fresh-view-c-sort8-evaluate-20261026-01",
+    "action": "evaluate_publish",
+    "outcome": "Completed",
+    "code": "COMPLETED",
+    "recovery": "Observe the updated view and choose an admissible next action.",
+    "retained_artifact_ids": [
+      "a0-1",
+      "a0-2"
+    ],
+    "candidate_id": "a0-2",
+    "evidence_ids": [
+      "e20"
+    ],
+    "immutable_result_refs": [
+      {
+        "artifact_id": "a0-2",
+        "sha256": "1fb2f75e8ab1039a99e2301be4a21ab2c3d0721b9b842ea9c6b11944d35ac205"
+      }
+    ],
+    "causal_witness": null,
+    "cost": {
+      "dispatch_wall_ns": 20300371,
+      "native_transactions": 1,
+      "scope": "actual dispatch through evidence recording; excludes final receipt fsync and response serialization"
+    },
+    "affected_basis": {
+      "contract": "d41ec12a8992a3e0754858d24ad408482a817fb247beef7795f65db17b2eefb6",
+      "checker": "1b0c935cde276e9e3e088a5cd940200597ba049b3b51bed3b872fbb471fbe24b",
+      "incumbent": "a0-2",
+      "frozen": {
+        "a0-1": "4ca36b65b7fec9b8f9c97f20ae22409dd7878bf8a0d23f4e377b855a0671e7b5",
+        "a0-2": "1fb2f75e8ab1039a99e2301be4a21ab2c3d0721b9b842ea9c6b11944d35ac205"
+      }
+    },
+    "outstanding_reservations": []
+  },
+  "view_schema": "bendloop-work-view-v1",
+  "checker_sha256": "1b0c935cde276e9e3e088a5cd940200597ba049b3b51bed3b872fbb471fbe24b",
+  "incumbent": {
+    "artifact_id": "a0-2",
+    "evidence_ids": [
+      "e20"
+    ],
+    "scope": "current receiver-acknowledged local result",
+    "sha256": "1fb2f75e8ab1039a99e2301be4a21ab2c3d0721b9b842ea9c6b11944d35ac205",
+    "value": [
+      0,
+      6,
+      2,
+      0,
+      8,
+      1,
+      1,
+      2,
+      7,
+      1,
+      2,
+      7,
+      2,
+      3,
+      8,
+      2,
+      5,
+      6,
+      3,
+      1,
+      5,
+      3,
+      4,
+      9
+    ],
+    "display": {
+      "codec": "flat-triples-date-id-value-v1",
+      "canonical_sha256": "1fb2f75e8ab1039a99e2301be4a21ab2c3d0721b9b842ea9c6b11944d35ac205",
+      "records": [
+        {
+          "date": 0,
+          "id": 6,
+          "value": 2
+        },
+        {
+          "date": 0,
+          "id": 8,
+          "value": 1
+        },
+        {
+          "date": 1,
+          "id": 2,
+          "value": 7
+        },
+        {
+          "date": 1,
+          "id": 2,
+          "value": 7
+        },
+        {
+          "date": 2,
+          "id": 3,
+          "value": 8
+        },
+        {
+          "date": 2,
+          "id": 5,
+          "value": 6
+        },
+        {
+          "date": 3,
+          "id": 1,
+          "value": 5
+        },
+        {
+          "date": 3,
+          "id": 4,
+          "value": 9
+        }
+      ]
+    }
+  }
+}

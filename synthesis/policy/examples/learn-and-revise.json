@@ -1,0 +1,134 @@
+{
+  "policy": {
+    "zero": false,
+    "ones": false,
+    "order": "zero-first"
+  },
+  "training": [
+    {
+      "training": [
+        20,
+        0,
+        0
+      ],
+      "transfer": [
+        [
+          18,
+          20,
+          0,
+          8,
+          1
+        ]
+      ],
+      "protected": [
+        [
+          17,
+          17,
+          0
+        ]
+      ],
+      "learning_budget": 1
+    },
+    {
+      "training": [
+        19,
+        0,
+        16
+      ],
+      "transfer": [
+        [
+          17,
+          1
+        ]
+      ],
+      "protected": [
+        [
+          17,
+          17,
+          0
+        ]
+      ],
+      "learning_budget": 1
+    }
+  ],
+  "validation": [
+    {
+      "training": [
+        18,
+        0,
+        1
+      ],
+      "transfer": [
+        [
+          20,
+          19,
+          0,
+          4,
+          19,
+          0,
+          4
+        ]
+      ],
+      "protected": [
+        [
+          17,
+          17,
+          0
+        ]
+      ],
+      "learning_budget": 1
+    },
+    {
+      "training": [
+        19,
+        20,
+        0,
+        4,
+        16
+      ],
+      "transfer": [
+        [
+          19,
+          18,
+          0,
+          4,
+          16
+        ]
+      ],
+      "protected": [
+        [
+          17,
+          17,
+          0
+        ]
+      ],
+      "learning_budget": 1
+    }
+  ],
+  "cycles": [
+    [
+      19,
+      17,
+      0,
+      16
+    ],
+    [
+      20,
+      17,
+      0,
+      17,
+      0
+    ]
+  ],
+  "protected": [
+    [
+      17,
+      17,
+      0
+    ]
+  ],
+  "max_nodes": 3,
+  "candidate_budget": 1,
+  "meta_budget": 3,
+  "cycle_budget": 2
+}

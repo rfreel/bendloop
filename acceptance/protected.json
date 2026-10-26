@@ -1,0 +1,24 @@
+{
+  "contract_id": "bendloop-counter-v1",
+  "protected_sha256": {
+    ".github/CODEOWNERS": "0e292651d08bab966623cf68e040d818d8b9c05b28e362c320d7551587b13a42",
+    ".github/ISSUE_TEMPLATE/task.md": "7d2949d651600d819c342b22b393af51199b9b86c394b0fbf76c084583ba787b",
+    ".github/pull_request_template.md": "41a2b1638e891917907a28a1ca4357c8902efb2995c44aa49113cf6031242194",
+    ".github/workflows/verify.yml": "c42f54c14de1d6a36bcb0a97cbaa56c3d44eb029b95071738f21b0bc21a3d068",
+    "AGENTS.md": "6d76b28cfcaf8e7e50ee9972d93e4b82686902988190cdcb35fe876f29eb07ce",
+    "LAWS.bend": "91efeb4031c0b8291aa189147579fd8475c5a48da3a3b0bb6624760bb2a0779d",
+    "SPEC.md": "2af98e5b4af4f399b81485c0220a653230bb543f64797dcb90c48c6aaad87b6d",
+    "acceptance/cases.json": "9d3a70c4a276178ca757e4f42e384ce829a2324ce2b4b5f938f0f8b19dc58a84",
+    "core/receipt.bend": "611023603954ee37ad06de6b6e1e4ee683e56aea1d743e4c1b31136c80eed656",
+    "factory/factory.template.yaml": "115d824d0d36b0c5a02d92aff25c9cd4a2b3f52fa4b84c4996875866fb440368",
+    "factory/upstream.lock": "8edb6a6dbe3b442e543910cbcc2c06e9c00950332d411b80a944ca76f98f0f52",
+    "main.bend": "670e0635c978a0f8d415e6acd4bacb6e901b7bea9f0acbb50d31c9c7f808b1cb",
+    "scripts/backlog.py": "4f65630a68e763fe9f564a394c4e8c9fdebb931271692268d254df2f958d3165",
+    "scripts/bootstrap.py": "b358221ce93bc7dba54faff40423aba751795a99187fe7c59406391a8a5acb9e",
+    "scripts/setup_factory.py": "0f34f6165340a6762140ae0d7d63981ef8f9fe60a170bd633f36fc23f33e1f7c",
+    "scripts/spec_backlog.py": "24c30de21301aa25bf7e8408151aef06ebc528ac3780fbe9917bbe1128ee182d",
+    "scripts/verify.py": "49af821a626ad82f46c9c6baf360e889b8801e29ea10fcd1b63d36680dfce96a",
+    "spec/counter.bend": "22f3d6327b2b93286fed524060eea1f81fc8800edb49ca7fc0f430f97155d6ef",
+    "toolchain.lock": "2de45c7a96c8fcd56e3c7e7b020e80ecfae741ed3e8fc564d13a2d38e39c47d9"
+  }
+}

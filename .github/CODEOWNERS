@@ -1,0 +1,10 @@
+# Review ownership only; branch rules must enforce review separately.
+/SPEC.md @rfreel
+/LAWS.bend @rfreel
+/spec/ @rfreel
+/core/ @rfreel
+/scripts/ @rfreel
+/acceptance/ @rfreel
+/toolchain.lock @rfreel
+/factory/ @rfreel
+/.github/ @rfreel

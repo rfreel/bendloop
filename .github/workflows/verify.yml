@@ -1,0 +1,37 @@
+name: verify
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Candidate checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          path: candidate
+          persist-credentials: false
+      - name: Acceptance authority checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          path: authority
+          persist-credentials: false
+      - name: Host prerequisites
+        run: sudo apt-get update && sudo apt-get install -y clang-18 zstd python3-venv
+      - name: Install pinned checker tools
+        run: python3 authority/scripts/bootstrap.py
+      - name: Check and execute immutable snapshot
+        run: python3 authority/scripts/verify.py --root candidate --authority authority --tools authority/.tools --output "$RUNNER_TEMP/bendloop-evidence"
+      - name: Preserve evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: bendloop-evidence
+          path: ${{ runner.temp }}/bendloop-evidence
+          if-no-files-found: warn

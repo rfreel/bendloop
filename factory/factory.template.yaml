@@ -1,0 +1,56 @@
+# Copied outside the target by scripts/setup_factory.py. Never run this template directly.
+project:
+  name: bendloop
+  repo: __TARGET__
+  language: bend
+  workflow: direct
+  main_branch: main
+  github: rfreel/bendloop
+  visibility: public
+  state_dir: __STATE__
+commands:
+  runtime_tests: python3 scripts/verify.py --tools __TOOLS__
+checker:
+  bend:
+    binary: __BEND__
+    args: ["--check-only"]
+    files: ["PROOF.bend"]
+    file_timeout_seconds: 180
+    jobs: 1
+    kernel_recheck: true
+    forbid: ["@unsafe", '\?TODO']
+spec:
+  files: ["SPEC.md", "spec/**/*.bend"]
+  immutable: ["LAWS.bend", "core/**", "main.bend", "scripts/**", "acceptance/**", "toolchain.lock", "factory/**", "AGENTS.md", ".github/**"]
+ffi:
+  allow: []
+providers:
+  codex:
+    kind: codex
+    sandbox: workspace-write
+    accounts: none
+roles:
+  specifier: {provider: codex, timeout_minutes: 20}
+  coordinator: {provider: codex, timeout_minutes: 20}
+  implementer: {provider: codex, timeout_minutes: 20, subagents: []}
+loops:
+  specify:
+    enabled: true
+    workers: 1
+    role: specifier
+    backlog_command: python3 scripts/spec_backlog.py
+    approval: human
+  implement:
+    enabled: true
+    workers: 1
+    role: implementer
+    max_attempts: 4
+    backlog_command: python3 scripts/backlog.py
+  optimize: {enabled: false}
+  audit: {enabled: false}
+gate:
+  cold: true
+  quiet_cpu_pct: 0
+limits:
+  max_parallel_agents: 1
+  nice: 10

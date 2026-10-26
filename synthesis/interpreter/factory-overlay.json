@@ -1,0 +1,5 @@
+{
+  "checker.bend.files.append": "synthesis/interpreter/PROOF.bend",
+  "commands.vectors": "python3 synthesis/interpreter/verify.py --tools ${SYNTH_TOOLS}",
+  "scope": "Add to the existing external synthesis factory config; preserve existing proof/runtime checks, approval mode, provider and paused state. Substitute the absolute pinned tool directory. This overlay is documentation, not a standalone config."
+}

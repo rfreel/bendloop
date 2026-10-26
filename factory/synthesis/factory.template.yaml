@@ -1,0 +1,52 @@
+# Render outside the target checkout. Only specify is enabled until review.
+project:
+  name: bendloop-synthesis
+  repo: ${SYNTH_TARGET}
+  language: bend
+  main_branch: main
+  state_dir: ${SYNTH_STATE}
+  # Existing clone; publishing uses the authenticated GitHub connector, not an absent gh login.
+commands:
+  runtime_tests: python3 scripts/verify.py --tools ${SYNTH_TOOLS}
+checker:
+  bend:
+    binary: ${SYNTH_TOOLS}/bend/bin/bend
+    args: ["--check-only"]
+    files: ["PROOF.bend", "synthesis/spec/model.bend"]
+    file_timeout_seconds: 180
+    jobs: 1
+    kernel_recheck: true
+    forbid: ["@unsafe", '\?TODO']
+spec:
+  files: ["synthesis/spec/**"]
+  immutable: ["AGENTS.md", "README.md", "SPEC.md", "LAWS.bend", "PROOF.bend", "main.bend", "src/**", "proofs/**", "core/**", "spec/**", "scripts/**", "acceptance/**", "toolchain.lock", "factory/**", "docs/**", "EVIDENCE.md", ".github/**", ".gitignore"]
+ffi:
+  allow: []
+providers:
+  codex:
+    kind: codex
+    binary: ${SYNTH_CODEX}
+    sandbox: workspace-write
+    accounts: none
+roles:
+  specifier:
+    provider: codex
+    timeout_minutes: 20
+    subagents: []
+    prompt: Read factory/synthesis/BRIEF.md. Draft only the requested specification files in synthesis/spec/. The owner authorized this drafting task. Do not alter the existing starter or implement the synthesizer. Run ff check before returning the draft.
+loops:
+  specify:
+    enabled: true
+    workers: 1
+    max_attempts: 2
+    backlog_command: python3 factory/synthesis/backlog.py
+    approval: human
+  implement: {enabled: false}
+  optimize: {enabled: false}
+  audit: {enabled: false}
+gate:
+  cold: true
+  quiet_cpu_pct: 0
+limits:
+  max_parallel_agents: 1
+  nice: 10
